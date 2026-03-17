@@ -860,9 +860,8 @@ footer{border-top:1px solid rgba(212,184,0,0.2);background:rgba(6,6,4,0.9)}
   <span class="lc-label">Official Launch</span>
   <span class="lc-timer" id="lc-timer"></span>
   <span class="lc-date">01.04.2026</span>
-  <button class="lc-close" title="Hide countdown" onclick="this.parentElement.classList.add('hidden')">&times;</button>
+  <button class="lc-close" id="lc-close-btn" title="Hide countdown">&times;</button>
 </div>
-<script>!function(){var L=new Date(2026,3,1).getTime(),T=document.getElementById("lc-timer"),B=document.getElementById("launch-countdown");function u(){var x=L-Date.now();if(x<=0){B.style.display="none";return}var d=Math.floor(x/864e5),h=Math.floor(x%864e5/36e5),m=Math.floor(x%36e5/6e4),s=Math.floor(x%6e4/1e3);T.textContent=d+"D "+String(h).padStart(2,"0")+"H "+String(m).padStart(2,"0")+"M "+String(s).padStart(2,"0")+"S"}u();setInterval(u,1e3)}();</script>
 <!-- END LAUNCH COUNTDOWN -->
 
 <button id="btt" aria-label="Back to top" title="Back to top">&#9650;</button>

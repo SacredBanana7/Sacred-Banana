@@ -112,3 +112,23 @@ document.getElementById('disciplesForm').addEventListener('submit',function(e){
   img.addEventListener('load',updateBg);
   updateBg();
 })();
+
+// Launch Countdown — REMOVE AFTER 01.04.2026
+(function(){
+  var L=new Date(2026,3,1).getTime();
+  var T=document.getElementById('lc-timer');
+  var B=document.getElementById('launch-countdown');
+  if(!T||!B)return;
+  function u(){
+    var x=L-Date.now();
+    if(x<=0){B.style.display='none';return;}
+    var d=Math.floor(x/864e5);
+    var h=Math.floor(x%864e5/36e5);
+    var m=Math.floor(x%36e5/6e4);
+    var s=Math.floor(x%6e4/1e3);
+    T.textContent=d+'D '+String(h).padStart(2,'0')+'H '+String(m).padStart(2,'0')+'M '+String(s).padStart(2,'0')+'S';
+  }
+  u();setInterval(u,1000);
+  var closeBtn=document.getElementById('lc-close-btn');
+  if(closeBtn){closeBtn.addEventListener('click',function(){B.classList.add('hidden');});}
+})();
