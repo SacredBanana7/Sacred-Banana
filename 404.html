@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>404 — SACRED BANANA</title>
+<meta name="robots" content="noindex">
+<style>
+@font-face{font-family:'VT323';font-style:normal;font-weight:400;font-display:swap;src:url('fonts/vt323-latin.woff2') format('woff2')}
+@font-face{font-family:'Share Tech Mono';font-style:normal;font-weight:400;font-display:swap;src:url('fonts/share-tech-mono-latin.woff2') format('woff2')}
+@font-face{font-family:'Courier Prime';font-style:normal;font-weight:400;font-display:swap;src:url('fonts/courier-prime-regular-latin.woff2') format('woff2')}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --paper:#0d0d0a;--cream:#e8e4d4;--cream-dim:#b0ac9c;--cream-ghost:#4a4840;
+  --yellow:#d4b800;--yellow-hot:#ffe135;--red:#c0392b;
+  --font-vt:'VT323',monospace;--font-mono:'Share Tech Mono',monospace;
+  --font-type:'Courier Prime',monospace;
+}
+body{background:var(--paper);color:var(--cream);font-family:var(--font-mono);overflow-x:hidden;cursor:crosshair;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:40px 24px}
+body::after{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23g)' opacity='0.18'/%3E%3C/svg%3E");pointer-events:none;z-index:9000;opacity:0.055;mix-blend-mode:overlay}
+body::before{content:'';position:fixed;inset:0;background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,0,0,0.35) 2px,rgba(0,0,0,0.35) 4px);pointer-events:none;z-index:8999;opacity:0.07}
+::selection{background:var(--yellow);color:#000}
+.code{font-family:var(--font-vt);font-size:clamp(6rem,15vw,12rem);color:var(--yellow);line-height:1;letter-spacing:0.05em;opacity:0.15;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:0;user-select:none}
+.content{position:relative;z-index:1}
+.glyph{font-size:3rem;margin-bottom:16px;filter:grayscale(0.3)}
+h1{font-family:var(--font-vt);font-size:clamp(1.8rem,4vw,2.5rem);color:var(--cream);margin-bottom:12px;letter-spacing:0.05em}
+.sub{font-family:var(--font-type);font-style:italic;font-size:0.9rem;color:var(--cream-dim);line-height:1.8;max-width:400px;margin:0 auto 32px}
+.meta{font-family:var(--font-mono);font-size:0.55rem;letter-spacing:0.2em;color:var(--cream-ghost);margin-bottom:32px;line-height:2}
+.btn{font-family:var(--font-mono);font-size:0.6rem;letter-spacing:0.25em;text-transform:uppercase;text-decoration:none;padding:12px 28px;border:1px solid rgba(212,184,0,0.3);color:var(--cream-dim);background:transparent;cursor:pointer;transition:all 0.2s;display:inline-block}
+.btn:hover{background:var(--yellow);color:#000;border-color:var(--yellow)}
+.btn.primary{background:var(--yellow);color:#000;border-color:var(--yellow)}
+.btn.primary:hover{background:var(--yellow-hot);border-color:var(--yellow-hot)}
+.btns{display:flex;gap:4px;justify-content:center;flex-wrap:wrap}
+</style>
+</head>
+<body>
+<div class="code">404</div>
+<div class="content">
+  <div class="glyph">🍌</div>
+  <h1>You Slipped.</h1>
+  <p class="sub">The page you seek has been consumed by the void — or perhaps it never existed. The Sacred Banana works in mysterious ways.</p>
+  <div class="meta">
+    ERROR CODE: BANANA_NOT_FOUND<br>
+    CLEARANCE: INSUFFICIENT PEEL<br>
+    STATUS: COSMICALLY MISALIGNED
+  </div>
+  <div class="btns">
+    <a href="/" class="btn primary">Return to Temple</a>
+    <a href="/#collection" class="btn">Browse Collection</a>
+  </div>
+</div>
+</body>
+</html>

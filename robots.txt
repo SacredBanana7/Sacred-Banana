@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /to do list.html
 
 Sitemap: https://sacredbanana.com/sitemap.xml
