@@ -859,36 +859,16 @@ footer{border-top:1px solid rgba(212,184,0,0.2);background:rgba(6,6,4,0.9)}
 <div id="launch-countdown">
   <span class="lc-dot"></span>
   <span class="lc-label">Official Launch</span>
-  <span class="lc-timer" id="lc-timer">00D 00H 00M</span>
+  <span class="lc-timer" id="lc-timer"></span>
   <span class="lc-date">01.04.2026</span>
   <button class="lc-close" title="Hide countdown" onclick="this.parentElement.classList.add('hidden')">&times;</button>
 </div>
+<script>!function(){var L=new Date(2026,3,1).getTime(),T=document.getElementById("lc-timer"),B=document.getElementById("launch-countdown");function u(){var x=L-Date.now();if(x<=0){B.style.display="none";return}var d=Math.floor(x/864e5),h=Math.floor(x%864e5/36e5),m=Math.floor(x%36e5/6e4),s=Math.floor(x%6e4/1e3);T.textContent=d+"D "+String(h).padStart(2,"0")+"H "+String(m).padStart(2,"0")+"M "+String(s).padStart(2,"0")+"S"}u();setInterval(u,1e3)}();</script>
 <!-- END LAUNCH COUNTDOWN -->
 
 <button id="btt" aria-label="Back to top" title="Back to top">&#9650;</button>
 
 <script src="app.js"></script>
-<!-- LAUNCH COUNTDOWN JS — REMOVE AFTER 01.04.2026 -->
-<script>
-(function run(){
-  var el=document.getElementById('lc-timer');
-  var box=document.getElementById('launch-countdown');
-  if(!el||!box){setTimeout(run,200);return;}
-  var launch=new Date(2026,3,1,0,0,0).getTime();
-  function tick(){
-    var diff=launch-Date.now();
-    if(diff<=0){box.style.display='none';return;}
-    var d=Math.floor(diff/86400000);
-    var h=Math.floor((diff%86400000)/3600000);
-    var m=Math.floor((diff%3600000)/60000);
-    var s=Math.floor((diff%60000)/1000);
-    el.textContent=d+'D '+('0'+h).slice(-2)+'H '+('0'+m).slice(-2)+'M '+('0'+s).slice(-2)+'S';
-  }
-  tick();
-  setInterval(tick,1000);
-})();
-</script>
-<!-- END LAUNCH COUNTDOWN JS -->
 <script data-goatcounter="https://sacredbanana.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
