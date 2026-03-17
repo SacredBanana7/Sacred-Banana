@@ -1,0 +1,4 @@
+# Large source files (not needed for website)
+*.png
+!logo.png
+index (1).html
