@@ -818,8 +818,7 @@ footer{border-top:1px solid rgba(212,184,0,0.2);background:rgba(6,6,4,0.9)}
   <div class="cult-body">
     <div class="cult-left rr">
       <p class="cult-manifesto">You have wandered far, pilgrim. You have seen the pyramid. You have witnessed the peel. Now it is time to take your place among <strong>the Enlightened.</strong><br><br>Join the Imperium. Receive dispatches from beyond the veil of seriousness. Get early access to drops. Be the first to know when <strong>the next banana falls.</strong><br><br>No spam. Only sacred transmissions. <em>Unsubscribe anytime — if you can handle the emptiness.</em></p>
-      <form name="disciples" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="disciplesForm">
-        <input type="hidden" name="form-name" value="disciples"/>
+      <form id="disciplesForm" action="/api/subscribe" method="POST">
         <p style="display:none"><label>Do not fill: <input name="bot-field"/></label></p>
         <div class="form-row">
           <input type="email" name="email" class="form-input" id="emailIn" placeholder="your.soul@universe.com" required/>
@@ -869,6 +868,6 @@ footer{border-top:1px solid rgba(212,184,0,0.2);background:rgba(6,6,4,0.9)}
 <button id="btt" aria-label="Back to top" title="Back to top">&#9650;</button>
 
 <script src="app.js"></script>
-<script data-goatcounter="https://sacredbanana.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+<!-- Cloudflare Web Analytics (cookie-free, DSGVO-compliant) — auto-injected by Cloudflare dashboard -->
 </body>
 </html>

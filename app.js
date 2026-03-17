@@ -33,19 +33,22 @@ document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener
 // Buy buttons
 document.querySelectorAll('.pcard-buy').forEach(function(btn){btn.addEventListener('click',function(){var o=this.textContent;this.textContent='\u2713 ADDED';this.style.background='var(--yellow)';this.style.color='#000';this.style.borderColor='var(--yellow)';var self=this;setTimeout(function(){self.textContent=o;self.style.background='';self.style.color='';self.style.borderColor='';},2000);});});
 
-// Email — Netlify Forms Submit (Spam protection: honeypot + time check)
+// Email — Cloudflare Pages Function Submit (Spam protection: honeypot + time check)
 var formLoadTime=Date.now();
 document.getElementById('disciplesForm').addEventListener('submit',function(e){
   e.preventDefault();
   var btn=document.getElementById('initBtn');
   var emailIn=document.getElementById('emailIn');
+  var honeypot=this.querySelector('[name="bot-field"]');
   var v=emailIn.value.trim();
+  // Honeypot check: reject if hidden field is filled (bot behavior)
+  if(honeypot&&honeypot.value){return;}
   // Time check: reject if submitted faster than 3 seconds (bot behavior)
   if(Date.now()-formLoadTime<3000){return;}
   if(!v||!v.includes('@')){emailIn.style.borderColor='var(--red)';emailIn.placeholder='A real email, pilgrim.';setTimeout(function(){emailIn.style.borderColor='';emailIn.placeholder='your.soul@universe.com';},2200);return;}
   btn.textContent='Transmitting...';btn.disabled=true;
-  var data=new URLSearchParams({'form-name':'disciples','email':v,'bot-field':''});
-  fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:data.toString()})
+  fetch('/api/subscribe',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:v})})
+    .then(function(r){if(!r.ok)throw new Error(r.status);return r.json();})
     .then(function(){btn.textContent='\ud83c\udf4c INITIATED';btn.style.background='var(--yellow-hot)';emailIn.value='';emailIn.placeholder='You are now among the Enlightened.';})
     .catch(function(){btn.textContent='Initiate Me';btn.disabled=false;btn.style.background='';btn.style.borderColor='var(--red)';btn.style.color='var(--red)';emailIn.style.borderColor='var(--red)';emailIn.placeholder='Transmission failed. Try again, pilgrim.';setTimeout(function(){emailIn.style.borderColor='';emailIn.placeholder='your.soul@universe.com';btn.style.borderColor='';btn.style.color='';},3000);});
 });
