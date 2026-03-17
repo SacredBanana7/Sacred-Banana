@@ -1,4 +1,8 @@
-# Large source files (not needed for website)
-*.png
-!logo.png
+# Backup/source files
 index (1).html
+Sacred Banana webpage backround.png
+seedvr2__00001_.png
+
+# OS files
+Thumbs.db
+.DS_Store
