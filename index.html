@@ -870,11 +870,11 @@ footer{border-top:1px solid rgba(212,184,0,0.2);background:rgba(6,6,4,0.9)}
 <script src="app.js"></script>
 <!-- LAUNCH COUNTDOWN JS — REMOVE AFTER 01.04.2026 -->
 <script>
-window.addEventListener('DOMContentLoaded',function(){
-  var launch=new Date(2026,3,1,0,0,0).getTime();
+(function run(){
   var el=document.getElementById('lc-timer');
   var box=document.getElementById('launch-countdown');
-  if(!el||!box)return;
+  if(!el||!box){setTimeout(run,200);return;}
+  var launch=new Date(2026,3,1,0,0,0).getTime();
   function tick(){
     var diff=launch-Date.now();
     if(diff<=0){box.style.display='none';return;}
@@ -886,7 +886,7 @@ window.addEventListener('DOMContentLoaded',function(){
   }
   tick();
   setInterval(tick,1000);
-});
+})();
 </script>
 <!-- END LAUNCH COUNTDOWN JS -->
 <script data-goatcounter="https://sacredbanana.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
