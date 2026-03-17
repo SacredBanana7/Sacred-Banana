@@ -15,6 +15,9 @@
 <meta name="twitter:description" content="Enlightenment through Absurdity. Street Art meets Sacred Geometry.">
 <meta name="twitter:image" content="https://sacredbanana.com/logo.png">
 <link rel="icon" type="image/png" href="logo.png">
+<link rel="canonical" href="https://sacredbanana.com/">
+<link rel="preload" href="images/pyramid-bg.webp" as="image">
+<link rel="preload" href="logo.png" as="image">
 <style>
 @font-face{font-family:'VT323';font-style:normal;font-weight:400;font-display:swap;src:url('fonts/vt323-latin.woff2') format('woff2')}
 @font-face{font-family:'Share Tech Mono';font-style:normal;font-weight:400;font-display:swap;src:url('fonts/share-tech-mono-latin.woff2') format('woff2')}
@@ -40,7 +43,7 @@ body::before{content:'';position:fixed;inset:0;background:repeating-linear-gradi
 
 /* NAV */
 #nav{position:fixed;top:0;left:0;right:0;z-index:500;border-bottom:1px solid rgba(212,184,0,0.2);background:rgba(13,13,10,0.97);padding:0 24px;display:flex;align-items:stretch;height:44px}
-.nav-file{font-family:var(--font-mono);font-size:0.65rem;letter-spacing:0.1em;color:var(--cream-ghost);display:flex;align-items:center;padding:0 16px;border-right:1px solid rgba(255,255,255,0.06);white-space:nowrap;cursor:pointer;transition:color 0.2s,background 0.2s}
+.nav-file{font-family:var(--font-mono);font-size:0.65rem;letter-spacing:0.1em;color:var(--cream-ghost);display:flex;align-items:center;padding:0 16px;border-right:1px solid rgba(255,255,255,0.06);white-space:nowrap;cursor:pointer;transition:color 0.2s,background 0.2s;text-decoration:none}
 .nav-file:first-child{color:var(--yellow);border-left:1px solid rgba(255,255,255,0.06)}
 .nav-file:hover{color:var(--cream);background:rgba(255,255,255,0.04)}
 .nav-spacer{flex:1}
@@ -328,6 +331,11 @@ footer{border-top:1px solid rgba(212,184,0,0.2);background:rgba(6,6,4,0.9)}
 @keyframes load-fill{0%{width:0%}60%{width:75%}80%{width:88%}100%{width:100%}}
 .loader-status{font-family:var(--font-mono);font-size:0.6rem;color:var(--cream-ghost);letter-spacing:0.2em}
 
+/* BACK TO TOP */
+#btt{position:fixed;bottom:24px;right:24px;z-index:800;width:40px;height:40px;border:1px solid rgba(212,184,0,0.3);background:rgba(13,13,10,0.9);color:var(--yellow);font-family:var(--font-vt);font-size:1.4rem;cursor:pointer;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity 0.3s,background 0.3s,border-color 0.3s}
+#btt.show{opacity:1;pointer-events:auto}
+#btt:hover{background:var(--yellow);color:#000;border-color:var(--yellow)}
+
 /* REVEAL */
 .rr{opacity:0;transform:translateY(24px);transition:opacity 0.7s ease,transform 0.7s ease}
 .rr.vis{opacity:1;transform:translateY(0)}
@@ -340,9 +348,11 @@ footer{border-top:1px solid rgba(212,184,0,0.2);background:rgba(6,6,4,0.9)}
 }
 @media(max-width:768px){
   #nav .nav-file:not(:first-child):not(.nav-logo-text){display:none}
-  .hero-main{grid-template-columns:1fr}.hero-left{display:none}
-  .hero-center{padding:40px 24px;min-height:70vh}
-  .hero-logo-bg{background-size:contain;background-position:center center}
+  .hero-main{grid-template-columns:1fr;min-height:auto}.hero-left{display:none}
+  .hero-center{padding:40px 24px;min-height:80svh;min-height:80vh}
+  .hero-logo-bg{background-size:80% auto;background-position:center 35%}
+  .hero-logo-fade-l,.hero-logo-fade-r{display:none}
+  .hero-logo-fade{height:120px}
   .hero-classified-bar{flex-wrap:wrap;justify-content:center;text-align:center;gap:4px;padding:6px 16px;font-size:0.5rem}
   .hero-classified-bar span:last-child{display:none}
   .hero-bottom{flex-direction:column;gap:12px;text-align:center;padding:12px 16px}
@@ -367,7 +377,8 @@ footer{border-top:1px solid rgba(212,184,0,0.2);background:rgba(6,6,4,0.9)}
   .section-header{grid-template-columns:auto 1fr}.sh-meta{display:none}
 }
 @media(max-width:480px){
-  .hero-center{min-height:60vh}
+  .hero-center{min-height:75svh;min-height:75vh}
+  .hero-logo-bg{background-size:90% auto;background-position:center 30%}
   .hero-sub{font-size:0.5rem;letter-spacing:0.3em}
   .hero-tagline{font-size:0.78rem}
   .btn-raw{font-size:0.5rem;padding:8px 14px}
@@ -388,12 +399,11 @@ footer{border-top:1px solid rgba(212,184,0,0.2);background:rgba(6,6,4,0.9)}
 
 <nav id="nav">
   <span class="nav-logo-text">SB/</span>
-  <div class="nav-file" onclick="document.querySelector('#about').scrollIntoView({behavior:'smooth'})">FILE</div>
-  <div class="nav-file" onclick="document.querySelector('#about').scrollIntoView({behavior:'smooth'})">EDIT</div>
-  <div class="nav-file" onclick="document.querySelector('#memes').scrollIntoView({behavior:'smooth'})">VIEW</div>
-  <div class="nav-file" onclick="document.querySelector('#collection').scrollIntoView({behavior:'smooth'})">COLLECTION</div>
-  <div class="nav-file" onclick="document.querySelector('#archive').scrollIntoView({behavior:'smooth'})">ARCHIVE</div>
-  <div class="nav-file" onclick="document.querySelector('#cult').scrollIntoView({behavior:'smooth'})">COMMUNITY</div>
+  <a class="nav-file" href="#about">DOCTRINE</a>
+  <a class="nav-file" href="#memes">MEMES</a>
+  <a class="nav-file" href="#collection">COLLECTION</a>
+  <a class="nav-file" href="#archive">ARCHIVE</a>
+  <a class="nav-file" href="#cult">COMMUNITY</a>
   <div class="nav-spacer"></div>
   <div class="nav-status">
     <span><span class="status-dot"></span>LIVE</span>
@@ -466,7 +476,7 @@ footer{border-top:1px solid rgba(212,184,0,0.2);background:rgba(6,6,4,0.9)}
   <div class="section-header rr">
     <div class="sh-number">01</div>
     <div class="sh-info"><div class="sh-label">Chapter One — The Foundation</div><div class="sh-title">The <span class="accent">Doctrine</span></div></div>
-    <div class="sh-meta">FILE: doctrine_v3.txt<br>STATUS: DECLASSIFIED<br>AUTHOR: [REDACTED]<br>REV: 2025.001</div>
+    <div class="sh-meta">FILE: doctrine_v3.txt<br>STATUS: DECLASSIFIED<br>AUTHOR: [REDACTED]<br>REV: 2026.001</div>
   </div>
   <div class="doctrine-grid">
     <div class="doc-col rr">
@@ -785,17 +795,19 @@ footer{border-top:1px solid rgba(212,184,0,0.2);background:rgba(6,6,4,0.9)}
     <div class="fc">
       <span class="fc-brand">☯ SACRED BANANA</span>
       <p class="fc-bio">An empire built on the universal truth that enlightenment arrives sideways — usually through absurdity, always through humor. Streetwear for the philosophically confused. Sacred geometry for the street-educated.</p>
-      <div class="fc-socials"><a href="#" class="fc-social">IG</a><a href="#" class="fc-social">TK</a><a href="#" class="fc-social">𝕏</a><a href="#" class="fc-social">DC</a></div>
+      <div class="fc-socials"><a href="#" class="fc-social" aria-label="Instagram — coming soon">IG</a><a href="#" class="fc-social" aria-label="TikTok — coming soon">TK</a><a href="#" class="fc-social" aria-label="X — coming soon">𝕏</a><a href="#" class="fc-social" aria-label="Discord — coming soon">DC</a></div>
     </div>
-    <div class="fc"><div class="fc-label">Temple</div><ul class="fc-links"><li><a href="#about">The Doctrine</a></li><li><a href="#memes">Meme Temple</a></li><li><a href="#archive">Sacred Codex</a></li><li><a href="#">The Manifesto</a></li><li><a href="#">About the Order</a></li></ul></div>
-    <div class="fc"><div class="fc-label">Collection</div><ul class="fc-links"><li><a href="#collection">All Items</a></li><li><a href="#">T-Shirts</a></li><li><a href="#">Hoodies</a></li><li><a href="#">Prints</a></li><li><a href="#">Stickers</a></li></ul></div>
-    <div class="fc"><div class="fc-label">Imperium</div><ul class="fc-links"><li><a href="#cult">Join the Cult</a></li><li><a href="#">Discord</a></li><li><a href="#">Shipping</a></li><li><a href="#">FAQ</a></li><li><a href="#">Contact Elders</a></li><li><a href="impressum.html">Impressum</a></li><li><a href="datenschutz.html">Datenschutz</a></li></ul></div>
+    <div class="fc"><div class="fc-label">Temple</div><ul class="fc-links"><li><a href="#about">The Doctrine</a></li><li><a href="#memes">Meme Temple</a></li><li><a href="#archive">Sacred Codex</a></li></ul></div>
+    <div class="fc"><div class="fc-label">Collection</div><ul class="fc-links"><li><a href="#collection">All Items</a></li></ul></div>
+    <div class="fc"><div class="fc-label">Imperium</div><ul class="fc-links"><li><a href="#cult">Join the Cult</a></li><li><a href="mailto:info@sacredbanana.com">Contact Elders</a></li><li><a href="impressum.html">Impressum</a></li><li><a href="datenschutz.html">Datenschutz</a></li></ul></div>
   </div>
   <div class="footer-bottom">
     <span>© 2026 SACRED BANANA IMPERIUM — ALL RIGHTS ABSURD · <a href="impressum.html" style="color:var(--cream-ghost);text-decoration:underline;text-underline-offset:3px">Impressum</a> · <a href="datenschutz.html" style="color:var(--cream-ghost);text-decoration:underline;text-underline-offset:3px">Datenschutz</a></span>
     <span>"In Banana We Trust"</span>
   </div>
 </footer>
+
+<button id="btt" aria-label="Back to top" title="Back to top">&#9650;</button>
 
 <script>
 // Loader
@@ -813,6 +825,11 @@ tick();setInterval(tick,1000);
 const rrEls=document.querySelectorAll('.rr');
 const rrObs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)setTimeout(()=>e.target.classList.add('vis'),60);});},{threshold:0.08,rootMargin:'0px 0px -30px 0px'});
 rrEls.forEach(el=>rrObs.observe(el));
+
+// Back to top
+const btt=document.getElementById('btt');
+window.addEventListener('scroll',()=>{btt.classList.toggle('show',window.scrollY>600);},{passive:true});
+btt.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
 
 // Smooth scroll anchors
 document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',e=>{const t=document.querySelector(a.getAttribute('href'));if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth'});}});});

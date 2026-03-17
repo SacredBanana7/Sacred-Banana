@@ -34,7 +34,12 @@ h1{font-family:var(--font-vt);font-size:clamp(2rem,4vw,3rem);color:var(--cream);
 .section:last-child{border-bottom:none}
 .label{font-family:var(--font-mono);font-size:0.5rem;letter-spacing:0.3em;color:var(--yellow);text-transform:uppercase;margin-bottom:12px}
 .value{font-family:var(--font-type);font-size:0.88rem;color:var(--cream-dim);line-height:2}
-.footer-bar{border-top:1px solid rgba(212,184,0,0.2);background:#060604;padding:16px 32px;display:flex;justify-content:space-between;align-items:center;font-family:var(--font-mono);font-size:0.55rem;color:var(--cream-ghost);letter-spacing:0.15em}
+.footer-bar{border-top:1px solid rgba(212,184,0,0.2);background:#060604;padding:16px 32px;display:flex;justify-content:space-between;align-items:center;font-family:var(--font-mono);font-size:0.55rem;color:var(--cream-ghost);letter-spacing:0.15em;flex-wrap:wrap;gap:8px}
+@media(max-width:768px){
+  .container{padding:48px 20px}
+  .top-bar{font-size:0.45rem;flex-wrap:wrap;justify-content:center;text-align:center}
+  .footer-bar{flex-direction:column;text-align:center}
+}
 </style>
 </head>
 <body>
@@ -86,7 +91,7 @@ h1{font-family:var(--font-vt);font-size:clamp(2rem,4vw,3rem);color:var(--cream);
 </div>
 <div class="footer-bar">
   <span>© 2026 SACRED BANANA IMPERIUM</span>
-  <span><a href="index.html">sacredbanana.com</a></span>
+  <span><a href="datenschutz.html">Datenschutz</a> · <a href="index.html">sacredbanana.com</a></span>
 </div>
 </body>
 </html>
