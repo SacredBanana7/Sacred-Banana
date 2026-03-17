@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Datenschutz — SACRED BANANA</title>
+<style>
+@font-face{font-family:'VT323';font-style:normal;font-weight:400;font-display:swap;src:url('fonts/vt323-latin.woff2') format('woff2')}
+@font-face{font-family:'Share Tech Mono';font-style:normal;font-weight:400;font-display:swap;src:url('fonts/share-tech-mono-latin.woff2') format('woff2')}
+@font-face{font-family:'Courier Prime';font-style:normal;font-weight:400;font-display:swap;src:url('fonts/courier-prime-regular-latin.woff2') format('woff2')}
+@font-face{font-family:'Courier Prime';font-style:normal;font-weight:700;font-display:swap;src:url('fonts/courier-prime-bold-latin.woff2') format('woff2')}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ink:#0a0a08;--paper:#0d0d0a;--cream:#e8e4d4;--cream-dim:#b0ac9c;--cream-ghost:#4a4840;
+  --yellow:#d4b800;--yellow-hot:#ffe135;--red:#c0392b;
+  --font-vt:'VT323',monospace;--font-mono:'Share Tech Mono',monospace;
+  --font-type:'Courier Prime',monospace;
+}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--cream);font-family:var(--font-mono);overflow-x:hidden;cursor:crosshair;min-height:100vh;display:flex;flex-direction:column}
+body::after{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23g)' opacity='0.18'/%3E%3C/svg%3E");pointer-events:none;z-index:9000;opacity:0.055;mix-blend-mode:overlay}
+body::before{content:'';position:fixed;inset:0;background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,0,0,0.35) 2px,rgba(0,0,0,0.35) 4px);pointer-events:none;z-index:8999;opacity:0.07}
+::-webkit-scrollbar{width:6px}::-webkit-scrollbar-track{background:#050504}::-webkit-scrollbar-thumb{background:var(--yellow)}
+::selection{background:var(--yellow);color:#000}
+a{color:var(--yellow);text-decoration:none;transition:color 0.2s}
+a:hover{color:var(--yellow-hot)}
+.top-bar{background:var(--red);padding:6px 24px;font-family:var(--font-mono);font-size:0.6rem;letter-spacing:0.4em;text-transform:uppercase;color:#fff;display:flex;justify-content:space-between;align-items:center}
+.container{max-width:720px;margin:0 auto;padding:80px 32px;flex:1}
+.back-link{font-family:var(--font-mono);font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;margin-bottom:48px;display:inline-block;border:1px solid rgba(212,184,0,0.3);padding:8px 18px;transition:all 0.2s}
+.back-link:hover{background:var(--yellow);color:#000;border-color:var(--yellow)}
+h1{font-family:var(--font-vt);font-size:clamp(2rem,4vw,3rem);color:var(--cream);margin-bottom:8px;letter-spacing:0.03em}
+.subtitle{font-family:var(--font-mono);font-size:0.5rem;letter-spacing:0.4em;color:var(--yellow);text-transform:uppercase;margin-bottom:48px;padding-bottom:16px;border-bottom:1px solid rgba(212,184,0,0.15)}
+.section{margin-bottom:40px;padding-bottom:32px;border-bottom:1px solid rgba(255,255,255,0.04)}
+.section:last-child{border-bottom:none}
+.label{font-family:var(--font-mono);font-size:0.5rem;letter-spacing:0.3em;color:var(--yellow);text-transform:uppercase;margin-bottom:12px}
+.value{font-family:var(--font-type);font-size:0.85rem;color:var(--cream-dim);line-height:2}
+.value ul{list-style:none;padding:0}
+.value ul li{padding:4px 0;padding-left:16px;position:relative}
+.value ul li::before{content:'—';position:absolute;left:0;color:var(--yellow);opacity:0.5}
+.footer-bar{border-top:1px solid rgba(212,184,0,0.2);background:#060604;padding:16px 32px;display:flex;justify-content:space-between;align-items:center;font-family:var(--font-mono);font-size:0.55rem;color:var(--cream-ghost);letter-spacing:0.15em;flex-wrap:wrap;gap:8px}
+@media(max-width:768px){
+  .container{padding:48px 20px}
+  .top-bar{font-size:0.45rem;flex-wrap:wrap;justify-content:center;text-align:center}
+  .footer-bar{flex-direction:column;text-align:center}
+}
+</style>
+</head>
+<body>
+<div class="top-bar">
+  <span>LEGAL DOCUMENT — SACRED BANANA IMPERIUM</span>
+  <span>DSGVO / GDPR</span>
+</div>
+<div class="container">
+  <a href="index.html" class="back-link">&larr; Back to Temple</a>
+  <h1>Datenschutzerkl&auml;rung</h1>
+  <div class="subtitle">Gem&auml;&szlig; Art. 13, 14 DSGVO</div>
+
+  <div class="section">
+    <div class="label">1. Verantwortlicher</div>
+    <div class="value">
+      Frederik Bohm<br>
+      Neue Linner Str. 10<br>
+      47799 Krefeld<br>
+      Deutschland<br><br>
+      E-Mail: <a href="mailto:info@sacredbanana.com">info@sacredbanana.com</a>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">2. &Uuml;bersicht der Verarbeitungen</div>
+    <div class="value">
+      Wir verarbeiten personenbezogene Daten nur, soweit dies zur Bereitstellung unserer Website und unserer Leistungen erforderlich ist. Die Verarbeitung erfolgt auf Grundlage der DSGVO (Datenschutz-Grundverordnung) und des BDSG (Bundesdatenschutzgesetz).
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">3. Hosting</div>
+    <div class="value">
+      Diese Website wird bei <strong>Netlify, Inc.</strong> (44 Montgomery Street, Suite 300, San Francisco, CA 94104, USA) gehostet. Beim Besuch unserer Website erfasst Netlify automatisch Informationen in sogenannten Server-Log-Dateien, die Ihr Browser automatisch &uuml;bermittelt:<br><br>
+      <ul>
+        <li>IP-Adresse des anfragenden Rechners</li>
+        <li>Datum und Uhrzeit der Anfrage</li>
+        <li>Adresse der aufgerufenen Seite (URL)</li>
+        <li>Verwendeter Browser und Betriebssystem</li>
+        <li>Referrer-URL</li>
+      </ul><br>
+      Die Verarbeitung erfolgt gem&auml;&szlig; Art. 6 Abs. 1 lit. f DSGVO auf Basis unseres berechtigten Interesses an der sicheren und effizienten Bereitstellung unserer Website. Netlify hat sich zur Einhaltung der DSGVO verpflichtet und verarbeitet Daten gem&auml;&szlig; den EU-Standardvertragsklauseln.
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">4. Newsletter / E-Mail-Eintragung</div>
+    <div class="value">
+      Wenn Sie sich &uuml;ber unser Formular f&uuml;r unseren Newsletter eintragen, verarbeiten wir folgende Daten:<br><br>
+      <ul>
+        <li>E-Mail-Adresse</li>
+        <li>Zeitpunkt der Anmeldung</li>
+      </ul><br>
+      <strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. a DSGVO (Einwilligung). Sie k&ouml;nnen Ihre Einwilligung jederzeit widerrufen, indem Sie uns eine E-Mail an <a href="mailto:info@sacredbanana.com">info@sacredbanana.com</a> senden.<br><br>
+      <strong>Datenverarbeiter:</strong> Die Formulardaten werden &uuml;ber Netlify Forms verarbeitet und auf Servern von Netlify, Inc. gespeichert. Netlify verarbeitet Daten gem&auml;&szlig; den EU-Standardvertragsklauseln.<br><br>
+      <strong>Speicherdauer:</strong> Ihre E-Mail-Adresse wird gespeichert, bis Sie sich abmelden oder uns zur L&ouml;schung auffordern.
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">5. Cookies</div>
+    <div class="value">
+      Diese Website verwendet <strong>keine Cookies</strong> und setzt keine Tracking-Technologien ein. Es werden keine Analyse-Tools (wie Google Analytics) oder Werbe-Tracker verwendet.
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">6. Schriftarten (lokal gehostet)</div>
+    <div class="value">
+      Wir verwenden auf dieser Website die Schriftarten VT323, Share Tech Mono, Courier Prime und Black Han Sans. Diese Schriftarten sind <strong>lokal auf unserem Server gespeichert</strong> und werden nicht von externen Servern (wie Google Fonts) geladen. Es findet daher <strong>keine Daten&uuml;bertragung an Dritte</strong> durch die Nutzung von Schriftarten statt.
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">7. Ihre Rechte</div>
+    <div class="value">
+      Gem&auml;&szlig; DSGVO haben Sie folgende Rechte:<br><br>
+      <ul>
+        <li><strong>Auskunft</strong> (Art. 15 DSGVO) &mdash; Sie k&ouml;nnen Auskunft &uuml;ber Ihre bei uns gespeicherten Daten verlangen.</li>
+        <li><strong>Berichtigung</strong> (Art. 16 DSGVO) &mdash; Sie k&ouml;nnen die Berichtigung unrichtiger Daten verlangen.</li>
+        <li><strong>L&ouml;schung</strong> (Art. 17 DSGVO) &mdash; Sie k&ouml;nnen die L&ouml;schung Ihrer Daten verlangen.</li>
+        <li><strong>Einschr&auml;nkung</strong> (Art. 18 DSGVO) &mdash; Sie k&ouml;nnen die Einschr&auml;nkung der Verarbeitung verlangen.</li>
+        <li><strong>Daten&uuml;bertragbarkeit</strong> (Art. 20 DSGVO) &mdash; Sie k&ouml;nnen Ihre Daten in einem g&auml;ngigen Format erhalten.</li>
+        <li><strong>Widerspruch</strong> (Art. 21 DSGVO) &mdash; Sie k&ouml;nnen der Verarbeitung Ihrer Daten widersprechen.</li>
+        <li><strong>Widerruf der Einwilligung</strong> (Art. 7 Abs. 3 DSGVO) &mdash; Erteilte Einwilligungen k&ouml;nnen jederzeit widerrufen werden.</li>
+      </ul><br>
+      Zur Aus&uuml;bung Ihrer Rechte wenden Sie sich bitte an: <a href="mailto:info@sacredbanana.com">info@sacredbanana.com</a>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">8. Beschwerderecht</div>
+    <div class="value">
+      Sie haben das Recht, sich bei einer Datenschutz-Aufsichtsbeh&ouml;rde &uuml;ber die Verarbeitung Ihrer personenbezogenen Daten zu beschweren.<br><br>
+      Zust&auml;ndige Aufsichtsbeh&ouml;rde:<br>
+      Landesbeauftragte f&uuml;r Datenschutz und Informationsfreiheit Nordrhein-Westfalen<br>
+      Kavalleriestr. 2&ndash;4<br>
+      40213 D&uuml;sseldorf<br>
+      <a href="https://www.ldi.nrw.de" rel="noopener noreferrer" target="_blank">www.ldi.nrw.de</a>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">9. &Auml;nderungen</div>
+    <div class="value">
+      Wir behalten uns vor, diese Datenschutzerkl&auml;rung anzupassen, um sie an ge&auml;nderte Rechtslagen oder bei &Auml;nderungen unserer Leistungen anzupassen.<br><br>
+      Stand: M&auml;rz 2026
+    </div>
+  </div>
+</div>
+<div class="footer-bar">
+  <span>&copy; 2026 SACRED BANANA IMPERIUM</span>
+  <span><a href="impressum.html">Impressum</a> · <a href="index.html">sacredbanana.com</a></span>
+</div>
+</body>
+</html>
