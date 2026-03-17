@@ -1,5 +1,7 @@
 User-agent: *
 Allow: /
-Disallow: /to do list.html
+Disallow: /to%20do%20list.html
+Disallow: /dashboard.html
+Disallow: /launch-checkliste.html
 
 Sitemap: https://sacredbanana.com/sitemap.xml
