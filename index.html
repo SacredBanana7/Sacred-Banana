@@ -361,6 +361,22 @@ footer{border-top:1px solid rgba(212,184,0,0.2);background:rgba(6,6,4,0.9)}
 @keyframes load-fill{0%{width:0%}60%{width:75%}80%{width:88%}100%{width:100%}}
 .loader-status{font-family:var(--font-mono);font-size:0.6rem;color:var(--cream-ghost);letter-spacing:0.2em}
 
+/* LAUNCH COUNTDOWN — REMOVE AFTER 01.04.2026 */
+#launch-countdown{position:fixed;left:0;top:50%;transform:translateY(-50%);z-index:700;writing-mode:vertical-lr;text-orientation:mixed;background:rgba(13,13,10,0.92);border:1px solid rgba(212,184,0,0.25);border-left:none;border-radius:0 6px 6px 0;padding:16px 10px;display:flex;flex-direction:column;align-items:center;gap:12px;backdrop-filter:blur(8px);transition:opacity 0.3s}
+#launch-countdown .lc-label{font-family:var(--font-mono);font-size:0.45rem;letter-spacing:0.3em;color:var(--yellow);text-transform:uppercase}
+#launch-countdown .lc-timer{font-family:var(--font-vt);font-size:1.1rem;color:var(--cream);letter-spacing:0.08em}
+#launch-countdown .lc-date{font-family:var(--font-mono);font-size:0.4rem;letter-spacing:0.2em;color:var(--cream-ghost)}
+#launch-countdown .lc-dot{width:4px;height:4px;border-radius:50%;background:var(--yellow-hot);animation:blink 1.4s step-end infinite;flex-shrink:0}
+#launch-countdown .lc-close{writing-mode:horizontal-tb;font-family:var(--font-mono);font-size:0.7rem;color:var(--cream-ghost);cursor:pointer;border:none;background:none;padding:4px;transition:color 0.2s;line-height:1}
+#launch-countdown .lc-close:hover{color:var(--yellow)}
+#launch-countdown.hidden{opacity:0;pointer-events:none}
+@media(max-width:768px){
+  #launch-countdown{top:auto;bottom:64px;left:0;writing-mode:horizontal-tb;text-orientation:initial;transform:none;flex-direction:row;border-radius:0 6px 6px 0;padding:8px 14px;gap:8px}
+  #launch-countdown .lc-label{font-size:0.4rem;letter-spacing:0.15em}
+  #launch-countdown .lc-timer{font-size:0.9rem}
+  #launch-countdown .lc-date{display:none}
+}
+
 /* BACK TO TOP */
 #btt{position:fixed;bottom:24px;right:24px;z-index:800;width:40px;height:40px;border:1px solid rgba(212,184,0,0.3);background:rgba(13,13,10,0.9);color:var(--yellow);font-family:var(--font-vt);font-size:1.4rem;cursor:pointer;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity 0.3s,background 0.3s,border-color 0.3s}
 #btt.show{opacity:1;pointer-events:auto}
@@ -839,9 +855,41 @@ footer{border-top:1px solid rgba(212,184,0,0.2);background:rgba(6,6,4,0.9)}
   </div>
 </footer>
 
+<!-- LAUNCH COUNTDOWN — REMOVE ENTIRE BLOCK AFTER 01.04.2026 -->
+<div id="launch-countdown">
+  <span class="lc-dot"></span>
+  <span class="lc-label">Official Launch</span>
+  <span class="lc-timer" id="lc-timer">00D 00H 00M</span>
+  <span class="lc-date">01.04.2026</span>
+  <button class="lc-close" title="Hide countdown" onclick="this.parentElement.classList.add('hidden')">&times;</button>
+</div>
+<!-- END LAUNCH COUNTDOWN -->
+
 <button id="btt" aria-label="Back to top" title="Back to top">&#9650;</button>
 
 <script src="app.js"></script>
+<!-- LAUNCH COUNTDOWN JS — REMOVE AFTER 01.04.2026 -->
+<script>
+(function(){
+  var launch=new Date('2026-04-01T00:00:00+02:00').getTime();
+  var el=document.getElementById('lc-timer');
+  var box=document.getElementById('launch-countdown');
+  if(!el||!box)return;
+  function tick(){
+    var now=Date.now();
+    var diff=launch-now;
+    if(diff<=0){box.style.display='none';return;}
+    var d=Math.floor(diff/86400000);
+    var h=Math.floor((diff%86400000)/3600000);
+    var m=Math.floor((diff%3600000)/60000);
+    var s=Math.floor((diff%60000)/1000);
+    el.textContent=d+'D '+('0'+h).slice(-2)+'H '+('0'+m).slice(-2)+'M '+('0'+s).slice(-2)+'S';
+    requestAnimationFrame(tick);
+  }
+  tick();
+})();
+</script>
+<!-- END LAUNCH COUNTDOWN JS -->
 <script data-goatcounter="https://sacredbanana.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
