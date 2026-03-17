@@ -841,12 +841,15 @@ document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click'
 // Buy buttons
 document.querySelectorAll('.pcard-buy').forEach(btn=>{btn.addEventListener('click',function(){const o=this.textContent;this.textContent='✓ ADDED';this.style.background='var(--yellow)';this.style.color='#000';this.style.borderColor='var(--yellow)';setTimeout(()=>{this.textContent=o;this.style.background='';this.style.color='';this.style.borderColor='';},2000);});});
 
-// Email — Netlify Forms Submit
+// Email — Netlify Forms Submit (Spam protection: honeypot + time check)
+const formLoadTime=Date.now();
 document.getElementById('disciplesForm').addEventListener('submit',function(e){
   e.preventDefault();
   const btn=document.getElementById('initBtn');
   const emailIn=document.getElementById('emailIn');
   const v=emailIn.value.trim();
+  // Time check: reject if submitted faster than 3 seconds (bot behavior)
+  if(Date.now()-formLoadTime<3000){return;}
   if(!v||!v.includes('@')){emailIn.style.borderColor='var(--red)';emailIn.placeholder='A real email, pilgrim.';setTimeout(()=>{emailIn.style.borderColor='';emailIn.placeholder='your.soul@universe.com';},2200);return;}
   btn.textContent='Transmitting...';btn.disabled=true;
   const data=new URLSearchParams({'form-name':'disciples','email':v,'bot-field':''});
