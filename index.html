@@ -461,12 +461,13 @@ footer{border-top:1px solid rgba(212,184,0,0.2);background:transparent;position:
 
 <nav id="nav">
   <span class="nav-logo-text"><img src="brand-icon.png" alt="Sacred Banana" style="height:22px;width:auto;margin-right:6px;vertical-align:middle">SB/</span>
-  <a class="nav-file" href="#about">DOCTRINE</a>
-  <a class="nav-file" href="#memes">MEMES</a>
-  <a class="nav-file" href="#collection">COLLECTION</a>
-  <a class="nav-file" href="#archive">ARCHIVE</a>
-  <a class="nav-file" href="#cult">COMMUNITY</a>
+  <a class="nav-file" href="#about" data-i18n="nav.doctrine">DOCTRINE</a>
+  <a class="nav-file" href="#memes" data-i18n="nav.memes">MEMES</a>
+  <a class="nav-file" href="#collection" data-i18n="nav.collection">COLLECTION</a>
+  <a class="nav-file" href="#archive" data-i18n="nav.archive">ARCHIVE</a>
+  <a class="nav-file" href="#cult" data-i18n="nav.community">COMMUNITY</a>
   <div class="nav-spacer"></div>
+  <button id="lang-toggle" class="nav-file" style="border:none;background:none;cursor:pointer;font-family:inherit;font-size:inherit;letter-spacing:inherit;color:var(--cream-ghost);padding:0 12px">DE</button>
   <div class="nav-status">
     <span><span class="status-dot"></span>LIVE</span>
     <span id="clock">00:00:00</span>
@@ -476,18 +477,18 @@ footer{border-top:1px solid rgba(212,184,0,0.2);background:transparent;position:
 
 <section id="hero">
   <div class="hero-classified-bar">
-    <span>WARNING: CLASSIFIED — SACRED BANANA IMPERIUM — INTERNAL DOCUMENT — DO NOT DISTRIBUTE</span>
-    <span>DOC-REF: SB-0001-ALPHA // CLEARANCE LEVEL: BANANA</span>
+    <span data-i18n="hero.warning">WARNING: CLASSIFIED — SACRED BANANA IMPERIUM — INTERNAL DOCUMENT — DO NOT DISTRIBUTE</span>
+    <span data-i18n="hero.docref">DOC-REF: SB-0001-ALPHA // CLEARANCE LEVEL: BANANA</span>
   </div>
   <div class="hero-main">
     <div class="hero-left">
-      <div class="meta-block"><div class="meta-label">Document Type</div><div class="meta-value code">BRAND_MANIFEST.exe</div></div>
-      <div class="meta-block"><div class="meta-label">Classification</div><div class="meta-value code" style="color:var(--red)">TOP SECRET<br>BANANA CLEARANCE</div></div>
-      <div class="meta-block"><div class="meta-label">Founded</div><div class="meta-value">Year of the<br>First Slip</div></div>
-      <div class="meta-block"><div class="meta-label">Headquarters</div><div class="meta-value"><span class="redacted">The Pyramid</span></div></div>
-      <div class="meta-block"><div class="meta-label">Current Members</div><div class="meta-value code">∞ + YOU</div></div>
-      <div class="meta-block"><div class="meta-label">Mission</div><div class="meta-value">Enlightenment through<br>controlled absurdity.</div></div>
-      <div class="meta-block"><div class="meta-label">Status</div><div class="meta-value code" style="color:var(--yellow-hot)"><span class="status-dot"></span>ACTIVE</div></div>
+      <div class="meta-block"><div class="meta-label" data-i18n="hero.doctype">Document Type</div><div class="meta-value code">BRAND_MANIFEST.exe</div></div>
+      <div class="meta-block"><div class="meta-label" data-i18n="hero.classification">Classification</div><div class="meta-value code" style="color:var(--red)">TOP SECRET<br>BANANA CLEARANCE</div></div>
+      <div class="meta-block"><div class="meta-label" data-i18n="hero.founded">Founded</div><div class="meta-value" data-i18n="hero.founded.val">Year of the<br>First Slip</div></div>
+      <div class="meta-block"><div class="meta-label" data-i18n="hero.hq">Headquarters</div><div class="meta-value"><span class="redacted">The Pyramid</span></div></div>
+      <div class="meta-block"><div class="meta-label" data-i18n="hero.members">Current Members</div><div class="meta-value code">∞ + YOU</div></div>
+      <div class="meta-block"><div class="meta-label" data-i18n="hero.mission">Mission</div><div class="meta-value" data-i18n="hero.mission.val">Enlightenment through<br>controlled absurdity.</div></div>
+      <div class="meta-block"><div class="meta-label" data-i18n="hero.status">Status</div><div class="meta-value code" style="color:var(--yellow-hot)"><span class="status-dot"></span>ACTIVE</div></div>
     </div>
 
     <div class="hero-center">
@@ -504,84 +505,84 @@ footer{border-top:1px solid rgba(212,184,0,0.2);background:transparent;position:
 
       <!-- Tagline sits at the bottom, over the logo -->
       <div class="hero-center-bottom">
-        <h1 class="hero-sub" style="font-size:inherit;font-weight:inherit;font-family:inherit;letter-spacing:inherit;color:inherit;margin:0">Sacred Banana — Enlightenment through Absurdity</h1>
-        <div class="hero-tagline">"In the beginning there was the Banana.<br>The Universe slipped on it and became conscious."</div>
+        <h1 class="hero-sub" style="font-size:inherit;font-weight:inherit;font-family:inherit;letter-spacing:inherit;color:inherit;margin:0" data-i18n="hero.h1">Sacred Banana — Enlightenment through Absurdity</h1>
+        <div class="hero-tagline" data-i18n="hero.tagline">"In the beginning there was the Banana.<br>The Universe slipped on it and became conscious."</div>
       </div>
     </div>
 
     <div class="hero-right">
-      <div class="index-title">Contents — This Document</div>
-      <a class="index-item" href="#about"><span class="index-num">01</span><span class="index-name">The Doctrine</span><span class="index-status live">OPEN</span></a>
-      <a class="index-item" href="#memes"><span class="index-num">02</span><span class="index-name">Meme Temple</span><span class="index-status live">OPEN</span></a>
-      <a class="index-item" href="#collection"><span class="index-num">03</span><span class="index-name">Collection</span><span class="index-status live">OPEN</span></a>
-      <a class="index-item" href="#archive"><span class="index-num">04</span><span class="index-name">Sacred Archive</span><span class="index-status live">OPEN</span></a>
-      <a class="index-item" href="#cult"><span class="index-num">05</span><span class="index-name">Join the Cult</span><span class="index-status live">OPEN</span></a>
-      <a class="index-item" href="#"><span class="index-num">06</span><span class="index-name">Inner Sanctum</span><span class="index-status" style="color:var(--red)">CLASSIFIED</span></a>
-      <a class="index-item" href="#"><span class="index-num">07</span><span class="index-name">The Book of Yellow</span><span class="index-status">COMING</span></a>
+      <div class="index-title" data-i18n="hero.contents">Contents — This Document</div>
+      <a class="index-item" href="#about"><span class="index-num">01</span><span class="index-name" data-i18n="hero.idx.doctrine">The Doctrine</span><span class="index-status live">OPEN</span></a>
+      <a class="index-item" href="#memes"><span class="index-num">02</span><span class="index-name" data-i18n="hero.idx.memes">Meme Temple</span><span class="index-status live">OPEN</span></a>
+      <a class="index-item" href="#collection"><span class="index-num">03</span><span class="index-name" data-i18n="hero.idx.collection">Collection</span><span class="index-status live">OPEN</span></a>
+      <a class="index-item" href="#archive"><span class="index-num">04</span><span class="index-name" data-i18n="hero.idx.archive">Sacred Archive</span><span class="index-status live">OPEN</span></a>
+      <a class="index-item" href="#cult"><span class="index-num">05</span><span class="index-name" data-i18n="hero.idx.cult">Join the Cult</span><span class="index-status live">OPEN</span></a>
+      <a class="index-item" href="#"><span class="index-num">06</span><span class="index-name" data-i18n="hero.idx.sanctum">Inner Sanctum</span><span class="index-status" style="color:var(--red)">CLASSIFIED</span></a>
+      <a class="index-item" href="#"><span class="index-num">07</span><span class="index-name" data-i18n="hero.idx.book">The Book of Yellow</span><span class="index-status">COMING</span></a>
       <div style="margin-top:auto;padding-top:32px;border-top:1px solid rgba(255,255,255,0.04)">
-        <div style="font-family:var(--font-mono);font-size:0.5rem;letter-spacing:0.2em;color:var(--cream-ghost);line-height:2.2">WARNING: Unauthorized access<br>to this document may result in<br>sudden enlightenment, loss of<br>existential certainty, and an<br>uncontrollable craving for fruit.</div>
+        <div style="font-family:var(--font-mono);font-size:0.5rem;letter-spacing:0.2em;color:var(--cream-ghost);line-height:2.2" data-i18n="hero.idx.warning">WARNING: Unauthorized access<br>to this document may result in<br>sudden enlightenment, loss of<br>existential certainty, and an<br>uncontrollable craving for fruit.</div>
       </div>
     </div>
   </div>
   <div class="hero-bottom">
-    <span>SACRED BANANA IMPERIUM // INTERNAL USE ONLY // DO NOT PHOTOCOPY</span>
+    <span data-i18n="hero.bottom.left">SACRED BANANA IMPERIUM // INTERNAL USE ONLY // DO NOT PHOTOCOPY</span>
     <div class="hero-cta-row">
-      <a href="#about" class="btn-raw">Explore Temple</a>
-      <a href="#collection" class="btn-raw primary">Shop Collection</a>
-      <a href="#cult" class="btn-raw danger">Enter the Cult</a>
+      <a href="#about" class="btn-raw" data-i18n="hero.btn.explore">Explore Temple</a>
+      <a href="#collection" class="btn-raw primary" data-i18n="hero.btn.shop">Shop Collection</a>
+      <a href="#cult" class="btn-raw danger" data-i18n="hero.btn.cult">Enter the Cult</a>
     </div>
-    <span>PAGE 1 OF ∞</span>
+    <span data-i18n="hero.bottom.right">PAGE 1 OF ∞</span>
   </div>
 </section>
 
 <section id="about" class="section-wrap">
   <div class="section-header rr">
     <div class="sh-number">01</div>
-    <div class="sh-info"><div class="sh-label">Chapter One — The Foundation</div><h2 class="sh-title">The <span class="accent">Doctrine</span></h2></div>
-    <div class="sh-meta">FILE: doctrine_v3.txt<br>STATUS: DECLASSIFIED<br>AUTHOR: [REDACTED]<br>REV: 2026.001</div>
+    <div class="sh-info"><div class="sh-label" data-i18n="s1.label">Chapter One — The Foundation</div><h2 class="sh-title" data-i18n="s1.title">The <span class="accent">Doctrine</span></h2></div>
+    <div class="sh-meta" data-i18n="s1.meta">FILE: doctrine_v3.txt<br>STATUS: DECLASSIFIED<br>AUTHOR: [REDACTED]<br>REV: 2026.001</div>
   </div>
   <div class="doctrine-grid">
     <div class="doc-col rr">
-      <div class="doc-col-label">manifesto — verbatim transcript</div>
+      <div class="doc-col-label" data-i18n="s1.manifesto.label">manifesto — verbatim transcript</div>
       <div class="manifesto-lines">
-        <div class="m-line"><span class="m-line-num">001</span>We believe that <strong>enlightenment does not arrive in beams of holy light.</strong></div>
-        <div class="m-line"><span class="m-line-num">002</span>It arrives at <strong>3am on a Tuesday</strong> when you step on a banana peel.</div>
-        <div class="m-line"><span class="m-line-num">003</span>And suddenly understand <em>everything</em> about impermanence.</div>
-        <div class="m-line"><span class="m-line-num">004</span>The banana is the universe's <strong>favorite punchline.</strong></div>
-        <div class="m-line"><span class="m-line-num">005</span>Sacred geometry is the structure <em>underneath the joke.</em></div>
-        <div class="m-line"><span class="m-line-num">006</span>You are both <strong>the philosopher and the clown.</strong></div>
-        <div class="m-line"><span class="m-line-num">007</span>You are both <strong>the pyramid and the peel.</strong></div>
-        <div class="m-line"><span class="m-line-num">008</span>The temple is open. The fruit is ripe.</div>
-        <div class="m-line"><span class="m-line-num">009</span><strong>The floor is slippery.</strong></div>
-        <div class="m-line"><span class="m-line-num">010</span><em>— The First Elders of the Sacred Banana Order</em></div>
+        <div class="m-line"><span class="m-line-num">001</span><span data-i18n="s1.m001">We believe that <strong>enlightenment does not arrive in beams of holy light.</strong></span></div>
+        <div class="m-line"><span class="m-line-num">002</span><span data-i18n="s1.m002">It arrives at <strong>3am on a Tuesday</strong> when you step on a banana peel.</span></div>
+        <div class="m-line"><span class="m-line-num">003</span><span data-i18n="s1.m003">And suddenly understand <em>everything</em> about impermanence.</span></div>
+        <div class="m-line"><span class="m-line-num">004</span><span data-i18n="s1.m004">The banana is the universe's <strong>favorite punchline.</strong></span></div>
+        <div class="m-line"><span class="m-line-num">005</span><span data-i18n="s1.m005">Sacred geometry is the structure <em>underneath the joke.</em></span></div>
+        <div class="m-line"><span class="m-line-num">006</span><span data-i18n="s1.m006">You are both <strong>the philosopher and the clown.</strong></span></div>
+        <div class="m-line"><span class="m-line-num">007</span><span data-i18n="s1.m007">You are both <strong>the pyramid and the peel.</strong></span></div>
+        <div class="m-line"><span class="m-line-num">008</span><span data-i18n="s1.m008">The temple is open. The fruit is ripe.</span></div>
+        <div class="m-line"><span class="m-line-num">009</span><span data-i18n="s1.m009"><strong>The floor is slippery.</strong></span></div>
+        <div class="m-line"><span class="m-line-num">010</span><span data-i18n="s1.m010"><em>— The First Elders of the Sacred Banana Order</em></span></div>
       </div>
     </div>
     <div class="doc-col rr">
-      <div class="doc-col-label">core tenets — operative principles</div>
+      <div class="doc-col-label" data-i18n="s1.tenets.label">core tenets — operative principles</div>
       <ul class="tenet-list">
-        <li class="tenet"><span class="tenet-mark">I.</span><div><div class="tenet-title">The Banana Principle</div><div class="tenet-body">The universe is fundamentally absurd. Wisdom arrives not through solemnity but through the moment you stop taking yourself seriously enough to slip.</div></div></li>
-        <li class="tenet"><span class="tenet-mark">II.</span><div><div class="tenet-title">Sacred Geometry of Chaos</div><div class="tenet-body">Beneath every joke is a pattern. Beneath every pattern is a joke. The pyramid and the peel are the same object from different angles.</div></div></li>
-        <li class="tenet"><span class="tenet-mark">III.</span><div><div class="tenet-title">The Halo is Optional</div><div class="tenet-body">Divinity doesn't require suffering. Sometimes it requires a banana, a loose tile, and the willingness to laugh at the fall.</div></div></li>
-        <li class="tenet"><span class="tenet-mark">IV.</span><div><div class="tenet-title">The Collective Delusion</div><div class="tenet-body">We are all walking toward something serious. The Sacred Banana reminds us: the walk itself is the joke. The destination is also a joke. This tenet is too.</div></div></li>
+        <li class="tenet"><span class="tenet-mark">I.</span><div><div class="tenet-title" data-i18n="s1.t1.title">The Banana Principle</div><div class="tenet-body" data-i18n="s1.t1.body">The universe is fundamentally absurd. Wisdom arrives not through solemnity but through the moment you stop taking yourself seriously enough to slip.</div></div></li>
+        <li class="tenet"><span class="tenet-mark">II.</span><div><div class="tenet-title" data-i18n="s1.t2.title">Sacred Geometry of Chaos</div><div class="tenet-body" data-i18n="s1.t2.body">Beneath every joke is a pattern. Beneath every pattern is a joke. The pyramid and the peel are the same object from different angles.</div></div></li>
+        <li class="tenet"><span class="tenet-mark">III.</span><div><div class="tenet-title" data-i18n="s1.t3.title">The Halo is Optional</div><div class="tenet-body" data-i18n="s1.t3.body">Divinity doesn't require suffering. Sometimes it requires a banana, a loose tile, and the willingness to laugh at the fall.</div></div></li>
+        <li class="tenet"><span class="tenet-mark">IV.</span><div><div class="tenet-title" data-i18n="s1.t4.title">The Collective Delusion</div><div class="tenet-body" data-i18n="s1.t4.body">We are all walking toward something serious. The Sacred Banana reminds us: the walk itself is the joke. The destination is also a joke. This tenet is too.</div></div></li>
       </ul>
     </div>
   </div>
   <div class="symbol-strip rr">
-    <div class="sym"><span class="sym-glyph">🍌</span><span class="sym-name">The Banana</span></div>
-    <div class="sym"><span class="sym-glyph">△</span><span class="sym-name">The Pyramid</span></div>
-    <div class="sym"><span class="sym-glyph">◎</span><span class="sym-name">The Eye</span></div>
-    <div class="sym"><span class="sym-glyph">☯</span><span class="sym-name">The Balance</span></div>
-    <div class="sym"><span class="sym-glyph">∞</span><span class="sym-name">The Loop</span></div>
-    <div class="sym"><span class="sym-glyph">✦</span><span class="sym-name">The Star</span></div>
-    <div class="sym"><span class="sym-glyph">☿</span><span class="sym-name">The Sign</span></div>
+    <div class="sym"><span class="sym-glyph">🍌</span><span class="sym-name" data-i18n="sym.banana">The Banana</span></div>
+    <div class="sym"><span class="sym-glyph">△</span><span class="sym-name" data-i18n="sym.pyramid">The Pyramid</span></div>
+    <div class="sym"><span class="sym-glyph">◎</span><span class="sym-name" data-i18n="sym.eye">The Eye</span></div>
+    <div class="sym"><span class="sym-glyph">☯</span><span class="sym-name" data-i18n="sym.balance">The Balance</span></div>
+    <div class="sym"><span class="sym-glyph">∞</span><span class="sym-name" data-i18n="sym.loop">The Loop</span></div>
+    <div class="sym"><span class="sym-glyph">✦</span><span class="sym-name" data-i18n="sym.star">The Star</span></div>
+    <div class="sym"><span class="sym-glyph">☿</span><span class="sym-name" data-i18n="sym.sign">The Sign</span></div>
   </div>
 </section>
 
 <section id="memes" class="section-wrap">
   <div class="section-header rr">
     <div class="sh-number">02</div>
-    <div class="sh-info"><div class="sh-label">Chapter Two — Visual Scripture</div><h2 class="sh-title">The Meme <span class="accent">Temple</span></h2></div>
-    <div class="sh-meta">TYPE: image_archive<br>ITEMS: 7 exhibits<br>CLEARANCE: OPEN<br>WARNING: may cause enlightenment</div>
+    <div class="sh-info"><div class="sh-label" data-i18n="s2.label">Chapter Two — Visual Scripture</div><h2 class="sh-title" data-i18n="s2.title">The Meme <span class="accent">Temple</span></h2></div>
+    <div class="sh-meta" data-i18n="s2.meta">TYPE: image_archive<br>ITEMS: 7 exhibits<br>CLEARANCE: OPEN<br>WARNING: may cause enlightenment</div>
   </div>
   <div class="meme-wall">
     <div class="mcard mc1 mb1">
@@ -600,7 +601,7 @@ footer{border-top:1px solid rgba(212,184,0,0.2);background:transparent;position:
         </svg>
         <img class="mcard-img" src="images/memes/all-seeing-banana.webp" srcset="images/memes/all-seeing-banana.webp 800w, images/memes/all-seeing-banana@2x.webp 1600w" sizes="(max-width:768px) 100vw, (max-width:1024px) 50vw, 40vw" loading="lazy" decoding="async" alt="The All-Seeing Banana — Sacred geometry pyramid with eye" data-onload="true">
       </div>
-      <div class="mcard-overlay"><div class="mcard-caption">THE ALL-SEEING BANANA CONFIRMS<br>YOUR LIFE CHOICES WERE WRONG</div><div class="mcard-tag">sacred truth #001 // pyramid division</div></div>
+      <div class="mcard-overlay"><div class="mcard-caption" data-i18n="meme.1.caption">THE ALL-SEEING BANANA CONFIRMS<br>YOUR LIFE CHOICES WERE WRONG</div><div class="mcard-tag" data-i18n="meme.1.tag">sacred truth #001 // pyramid division</div></div>
     </div>
     <div class="mcard mc2 mb2">
       <div class="mcard-inner">
@@ -613,7 +614,7 @@ footer{border-top:1px solid rgba(212,184,0,0.2);background:transparent;position:
         </svg>
         <img class="mcard-img" src="images/memes/ascension-mode.webp" srcset="images/memes/ascension-mode.webp 800w, images/memes/ascension-mode@2x.webp 1600w" sizes="(max-width:768px) 50vw, 33vw" loading="lazy" decoding="async" alt="Ascension Mode — Flower of life with ascending banana" data-onload="true">
       </div>
-      <div class="mcard-overlay"><div class="mcard-caption">ASCENSION<br>MODE: ON</div><div class="mcard-tag">sacred truth #002</div></div>
+      <div class="mcard-overlay"><div class="mcard-caption" data-i18n="meme.2.caption">ASCENSION<br>MODE: ON</div><div class="mcard-tag" data-i18n="meme.2.tag">sacred truth #002</div></div>
     </div>
     <div class="mcard mc3 mb3">
       <div class="mcard-inner">
@@ -627,7 +628,7 @@ footer{border-top:1px solid rgba(212,184,0,0.2);background:transparent;position:
         </svg>
         <img class="mcard-img" src="images/memes/cosmic-descent.webp" srcset="images/memes/cosmic-descent.webp 800w, images/memes/cosmic-descent@2x.webp 1600w" sizes="(max-width:768px) 50vw, 25vw" loading="lazy" decoding="async" alt="Cosmic Descent — The slip is the path" data-onload="true">
       </div>
-      <div class="mcard-overlay"><div class="mcard-caption">THE SLIP<br>IS THE PATH</div><div class="mcard-tag">tao of banana // #003</div></div>
+      <div class="mcard-overlay"><div class="mcard-caption" data-i18n="meme.3.caption">THE SLIP<br>IS THE PATH</div><div class="mcard-tag" data-i18n="meme.3.tag">tao of banana // #003</div></div>
     </div>
     <div class="mcard mc4 mb4">
       <div class="mcard-inner">
@@ -643,7 +644,7 @@ footer{border-top:1px solid rgba(212,184,0,0.2);background:transparent;position:
         </svg>
         <img class="mcard-img" src="images/memes/banana-wings.webp" srcset="images/memes/banana-wings.webp 800w, images/memes/banana-wings@2x.webp 1600w" sizes="(max-width:768px) 50vw, 25vw" loading="lazy" decoding="async" alt="Banana with Wings — Transcended form" data-onload="true">
       </div>
-      <div class="mcard-overlay"><div class="mcard-caption">BANANA<br>WITH WINGS</div><div class="mcard-tag">peak civilization // #004</div></div>
+      <div class="mcard-overlay"><div class="mcard-caption" data-i18n="meme.4.caption">BANANA<br>WITH WINGS</div><div class="mcard-tag" data-i18n="meme.4.tag">peak civilization // #004</div></div>
     </div>
     <div class="mcard mc5 mb5">
       <div class="mcard-inner">
@@ -657,7 +658,7 @@ footer{border-top:1px solid rgba(212,184,0,0.2);background:transparent;position:
         </svg>
         <img class="mcard-img" src="images/memes/holy-trinity.webp" srcset="images/memes/holy-trinity.webp 800w, images/memes/holy-trinity@2x.webp 1600w" sizes="(max-width:768px) 50vw, 33vw" loading="lazy" decoding="async" alt="Three Truths Three Bananas — Holy trinity of fruit" data-onload="true">
       </div>
-      <div class="mcard-overlay"><div class="mcard-caption">THREE TRUTHS<br>THREE BANANAS</div><div class="mcard-tag">sacred doctrine // #005</div></div>
+      <div class="mcard-overlay"><div class="mcard-caption" data-i18n="meme.5.caption">THREE TRUTHS<br>THREE BANANAS</div><div class="mcard-tag" data-i18n="meme.5.tag">sacred doctrine // #005</div></div>
     </div>
     <div class="mcard mc6 mb6">
       <div class="mcard-inner">
@@ -676,7 +677,7 @@ footer{border-top:1px solid rgba(212,184,0,0.2);background:transparent;position:
         </svg>
         <img class="mcard-img" src="images/memes/sacred-trilogy.webp" srcset="images/memes/sacred-trilogy.webp 800w, images/memes/sacred-trilogy@2x.webp 1600w" sizes="(max-width:768px) 100vw, 40vw" loading="lazy" decoding="async" alt="The Sacred Trilogy — The banana, the fall, the laughter" data-onload="true">
       </div>
-      <div class="mcard-overlay"><div class="mcard-caption">THE SACRED<br>TRILOGY</div><div class="mcard-tag">holy trinity of absurdism // #006</div></div>
+      <div class="mcard-overlay"><div class="mcard-caption" data-i18n="meme.6.caption">THE SACRED<br>TRILOGY</div><div class="mcard-tag" data-i18n="meme.6.tag">holy trinity of absurdism // #006</div></div>
     </div>
     <div class="mcard mc7 mb7">
       <div class="mcard-inner">
@@ -694,7 +695,7 @@ footer{border-top:1px solid rgba(212,184,0,0.2);background:transparent;position:
         </svg>
         <img class="mcard-img" src="images/memes/the-order.webp" srcset="images/memes/the-order.webp 800w, images/memes/the-order@2x.webp 1600w" sizes="(max-width:768px) 100vw, 58vw" loading="lazy" decoding="async" alt="The Order — Sacred Banana Order seal" data-onload="true">
       </div>
-      <div class="mcard-overlay"><div class="mcard-caption">THE ORDER EXISTS. THE BANANA IS REAL.</div><div class="mcard-tag">internal document // level banana clearance only</div></div>
+      <div class="mcard-overlay"><div class="mcard-caption" data-i18n="meme.7.caption">THE ORDER EXISTS. THE BANANA IS REAL.</div><div class="mcard-tag" data-i18n="meme.7.tag">internal document // level banana clearance only</div></div>
     </div>
   </div>
 </section>
@@ -702,8 +703,8 @@ footer{border-top:1px solid rgba(212,184,0,0.2);background:transparent;position:
 <section id="collection" class="section-wrap">
   <div class="section-header rr">
     <div class="sh-number">03</div>
-    <div class="sh-info"><div class="sh-label">Chapter Three — The Merchandise</div><h2 class="sh-title">The <span class="accent">Collection</span></h2></div>
-    <div class="sh-meta">SEASON: 001<br>ITEMS: 4 available<br>STATUS: IN STOCK<br>SHIPS: WORLDWIDE</div>
+    <div class="sh-info"><div class="sh-label" data-i18n="s3.label">Chapter Three — The Merchandise</div><h2 class="sh-title" data-i18n="s3.title">The <span class="accent">Collection</span></h2></div>
+    <div class="sh-meta" data-i18n="s3.meta">SEASON: 001<br>ITEMS: 4 available<br>STATUS: IN STOCK<br>SHIPS: WORLDWIDE</div>
   </div>
   <div class="product-wall">
     <div class="pcard rr">
@@ -718,8 +719,8 @@ footer{border-top:1px solid rgba(212,184,0,0.2);background:transparent;position:
         <img class="pcard-photo" src="images/products/tee-001.webp" srcset="images/products/tee-001.webp 600w, images/products/tee-001@2x.webp 1200w" sizes="(max-width:768px) 100vw, 25vw" loading="lazy" decoding="async" alt="Eye of the Banana Tee" data-onload="true">
         <video class="pcard-video" muted loop playsinline disablepictureinpicture preload="none" data-src-webm="videos/products/tee-001-hover.webm" data-src-mp4="videos/products/tee-001-hover.mp4"></video>
       </div>
-      <div class="pcard-body"><div class="pcard-ref">REF: SB-TEE-001</div><div class="pcard-name">Eye of the Banana Tee</div><div class="pcard-desc">Pyramid + All-Seeing Banana Eye. 100% organic cotton. Garment-dyed. Gold screen-print. Enlightened fit.</div></div>
-      <div class="pcard-footer"><div class="pcard-price">€42</div><button class="pcard-buy">Add to Cart</button></div>
+      <div class="pcard-body"><div class="pcard-ref">REF: SB-TEE-001</div><div class="pcard-name" data-i18n="p1.name">Eye of the Banana Tee</div><div class="pcard-desc" data-i18n="p1.desc">Pyramid + All-Seeing Banana Eye. 100% organic cotton. Garment-dyed. Gold screen-print. Enlightened fit.</div></div>
+      <div class="pcard-footer"><div class="pcard-price">€42</div><button class="pcard-buy" data-i18n="p.addtocart">Add to Cart</button></div>
     </div>
     <div class="pcard rr">
       <div class="pcard-img" style="background:#0a0a0d"><div class="pcard-flag ltd">Limited</div>
@@ -734,8 +735,8 @@ footer{border-top:1px solid rgba(212,184,0,0.2);background:transparent;position:
         <img class="pcard-photo" src="images/products/hoodie-001.webp" srcset="images/products/hoodie-001.webp 600w, images/products/hoodie-001@2x.webp 1200w" sizes="(max-width:768px) 100vw, 25vw" loading="lazy" decoding="async" alt="Imperium Hoodie" data-onload="true">
         <video class="pcard-video" muted loop playsinline disablepictureinpicture preload="none" data-src-webm="videos/products/hoodie-001-hover.webm" data-src-mp4="videos/products/hoodie-001-hover.mp4"></video>
       </div>
-      <div class="pcard-body"><div class="pcard-ref">REF: SB-HDY-001</div><div class="pcard-name">Imperium Hoodie</div><div class="pcard-desc">Heavyweight 400gsm fleece. Embroidered banana sigil. Ribbed cuffs. For cold and existential winters.</div></div>
-      <div class="pcard-footer"><div class="pcard-price">€89</div><button class="pcard-buy">Add to Cart</button></div>
+      <div class="pcard-body"><div class="pcard-ref">REF: SB-HDY-001</div><div class="pcard-name" data-i18n="p2.name">Imperium Hoodie</div><div class="pcard-desc" data-i18n="p2.desc">Heavyweight 400gsm fleece. Embroidered banana sigil. Ribbed cuffs. For cold and existential winters.</div></div>
+      <div class="pcard-footer"><div class="pcard-price">€89</div><button class="pcard-buy" data-i18n="p.addtocart">Add to Cart</button></div>
     </div>
     <div class="pcard rr">
       <div class="pcard-img" style="background:#090909">
@@ -752,8 +753,8 @@ footer{border-top:1px solid rgba(212,184,0,0.2);background:transparent;position:
         <img class="pcard-photo" src="images/products/poster-001.webp" srcset="images/products/poster-001.webp 600w, images/products/poster-001@2x.webp 1200w" sizes="(max-width:768px) 100vw, 25vw" loading="lazy" decoding="async" alt="Sacred Poster A2" data-onload="true">
         <video class="pcard-video" muted loop playsinline disablepictureinpicture preload="none" data-src-webm="videos/products/poster-001-hover.webm" data-src-mp4="videos/products/poster-001-hover.mp4"></video>
       </div>
-      <div class="pcard-body"><div class="pcard-ref">REF: SB-PRT-001</div><div class="pcard-name">Sacred Poster A2</div><div class="pcard-desc">Art-grade 220gsm matte. Gold metallic ink. Numbered edition of 200. Frame not included — reality is the frame.</div></div>
-      <div class="pcard-footer"><div class="pcard-price">€28</div><button class="pcard-buy">Add to Cart</button></div>
+      <div class="pcard-body"><div class="pcard-ref">REF: SB-PRT-001</div><div class="pcard-name" data-i18n="p3.name">Sacred Poster A2</div><div class="pcard-desc" data-i18n="p3.desc">Art-grade 220gsm matte. Gold metallic ink. Numbered edition of 200. Frame not included — reality is the frame.</div></div>
+      <div class="pcard-footer"><div class="pcard-price">€28</div><button class="pcard-buy" data-i18n="p.addtocart">Add to Cart</button></div>
     </div>
     <div class="pcard rr">
       <div class="pcard-img" style="background:#080808"><div class="pcard-flag">Pack · 8</div>
@@ -776,8 +777,8 @@ footer{border-top:1px solid rgba(212,184,0,0.2);background:transparent;position:
         <img class="pcard-photo" src="images/products/sticker-001.webp" srcset="images/products/sticker-001.webp 600w, images/products/sticker-001@2x.webp 1200w" sizes="(max-width:768px) 100vw, 25vw" loading="lazy" decoding="async" alt="Sticker Gospel — 8 sacred stickers" data-onload="true">
         <video class="pcard-video" muted loop playsinline disablepictureinpicture preload="none" data-src-webm="videos/products/sticker-001-hover.webm" data-src-mp4="videos/products/sticker-001-hover.mp4"></video>
       </div>
-      <div class="pcard-body"><div class="pcard-ref">REF: SB-STK-001</div><div class="pcard-name">Sticker Gospel</div><div class="pcard-desc">8 sacred stickers. Waterproof vinyl. Spread the doctrine on laptops, walls, other people's cars.</div></div>
-      <div class="pcard-footer"><div class="pcard-price">€12</div><button class="pcard-buy">Add to Cart</button></div>
+      <div class="pcard-body"><div class="pcard-ref">REF: SB-STK-001</div><div class="pcard-name" data-i18n="p4.name">Sticker Gospel</div><div class="pcard-desc" data-i18n="p4.desc">8 sacred stickers. Waterproof vinyl. Spread the doctrine on laptops, walls, other people's cars.</div></div>
+      <div class="pcard-footer"><div class="pcard-price">€12</div><button class="pcard-buy" data-i18n="p.addtocart">Add to Cart</button></div>
     </div>
   </div>
 </section>
@@ -785,35 +786,35 @@ footer{border-top:1px solid rgba(212,184,0,0.2);background:transparent;position:
 <section id="archive" class="section-wrap">
   <div class="section-header rr">
     <div class="sh-number">04</div>
-    <div class="sh-info"><div class="sh-label">Chapter Four — The Codex</div><h2 class="sh-title">The Sacred <span class="accent">Archive</span></h2></div>
-    <div class="sh-meta">TYPE: text_archive<br>ENTRIES: 6 documents<br>CLEARANCE: OPEN<br>UPDATED: CONTINUOUSLY</div>
+    <div class="sh-info"><div class="sh-label" data-i18n="s4.label">Chapter Four — The Codex</div><h2 class="sh-title" data-i18n="s4.title">The Sacred <span class="accent">Archive</span></h2></div>
+    <div class="sh-meta" data-i18n="s4.meta">TYPE: text_archive<br>ENTRIES: 6 documents<br>CLEARANCE: OPEN<br>UPDATED: CONTINUOUSLY</div>
   </div>
   <div class="archive-layout">
     <div class="archive-col rr">
-      <div class="archive-col-label">scripture — selected passages</div>
-      <div class="qcard"><div class="qcard-text">"The wise man slips on the banana peel <strong>consciously.</strong> The enlightened man slips and laughs. The fully realized being <strong>IS the banana peel.</strong>"</div><div class="qcard-source">The Book of Yellow, Chapter III</div></div>
-      <div class="qcard"><div class="qcard-text">"Every sacred geometry contains, at its center, if you look carefully enough, the faint outline of a banana. This is <strong>not a metaphor.</strong> This is a warning."</div><div class="qcard-source">Elder Kumquat, Founder of the Order</div></div>
-      <div class="qcard"><div class="qcard-text">"The pyramid points upward. The banana points upward. One is made of stone. The other rots in three days. Draw your own conclusions about <strong>permanence.</strong>"</div><div class="qcard-source">Sacred Banana Treatise Vol. II</div></div>
-      <div class="qcard"><div class="qcard-text">"I asked the oracle for the meaning of life. The oracle dropped a banana. I slipped. On the way down, I understood everything. Then I hit the floor and <strong>forgot it all.</strong> Classic."</div><div class="qcard-source">Anonymous Disciple</div></div>
+      <div class="archive-col-label" data-i18n="s4.scripture.label">scripture — selected passages</div>
+      <div class="qcard"><div class="qcard-text" data-i18n="s4.q1">"The wise man slips on the banana peel <strong>consciously.</strong> The enlightened man slips and laughs. The fully realized being <strong>IS the banana peel.</strong>"</div><div class="qcard-source" data-i18n="s4.q1.src">The Book of Yellow, Chapter III</div></div>
+      <div class="qcard"><div class="qcard-text" data-i18n="s4.q2">"Every sacred geometry contains, at its center, if you look carefully enough, the faint outline of a banana. This is <strong>not a metaphor.</strong> This is a warning."</div><div class="qcard-source" data-i18n="s4.q2.src">Elder Kumquat, Founder of the Order</div></div>
+      <div class="qcard"><div class="qcard-text" data-i18n="s4.q3">"The pyramid points upward. The banana points upward. One is made of stone. The other rots in three days. Draw your own conclusions about <strong>permanence.</strong>"</div><div class="qcard-source" data-i18n="s4.q3.src">Sacred Banana Treatise Vol. II</div></div>
+      <div class="qcard"><div class="qcard-text" data-i18n="s4.q4">"I asked the oracle for the meaning of life. The oracle dropped a banana. I slipped. On the way down, I understood everything. Then I hit the floor and <strong>forgot it all.</strong> Classic."</div><div class="qcard-source" data-i18n="s4.q4.src">Anonymous Disciple</div></div>
     </div>
     <div class="archive-col rr">
-      <div class="archive-col-label">classified files — available documents</div>
-      <div class="file-item"><div class="file-top"><span class="file-name">BANANA_MANIFESTO</span><span class="file-ext">.txt</span></div><div class="file-desc">The foundational document. Twenty-seven pages on why the banana is the universe's most honest object.</div><div class="file-size">27 pages · DECLASSIFIED</div></div>
-      <div class="file-item"><div class="file-top"><span class="file-name">COSMIC_PEEL_THEORY</span><span class="file-ext">.pdf</span></div><div class="file-desc">Ancient civilizations did not fall because of war. They fell because of a single banana peel at the peak of their hubris.</div><div class="file-size">144 pages · UNDER REVIEW</div></div>
-      <div class="file-item"><div class="file-top"><span class="file-name">SACRED_GEOMETRY_v7</span><span class="file-ext">.fig</span></div><div class="file-desc">All sacred geometry diagrams. Cross-referenced with banana anatomy. The overlaps are disturbing.</div><div class="file-size">∞ diagrams · RESTRICTED</div></div>
-      <div class="file-item"><div class="file-top"><span class="file-name">THE_BOOK_OF_YELLOW</span><span class="file-ext">.epub</span></div><div class="file-desc">A complete philosophical field guide to enlightenment through failure, absurdity, and potassium-rich fruit.</div><div class="file-size">COMING 2026 · PRE-ORDER OPEN</div></div>
-      <div class="file-item"><div class="file-top"><span class="file-name">INNER_SANCTUM_ACCESS</span><span class="file-ext">.exe</span></div><div class="file-desc">Access to the deeper layers. Members only. Banana clearance required. You probably aren't ready.</div><div class="file-size">CLASSIFIED · JOIN CULT FIRST</div></div>
+      <div class="archive-col-label" data-i18n="s4.files.label">classified files — available documents</div>
+      <div class="file-item"><div class="file-top"><span class="file-name">BANANA_MANIFESTO</span><span class="file-ext">.txt</span></div><div class="file-desc" data-i18n="s4.f1.desc">The foundational document. Twenty-seven pages on why the banana is the universe's most honest object.</div><div class="file-size">27 pages · DECLASSIFIED</div></div>
+      <div class="file-item"><div class="file-top"><span class="file-name">COSMIC_PEEL_THEORY</span><span class="file-ext">.pdf</span></div><div class="file-desc" data-i18n="s4.f2.desc">Ancient civilizations did not fall because of war. They fell because of a single banana peel at the peak of their hubris.</div><div class="file-size">144 pages · UNDER REVIEW</div></div>
+      <div class="file-item"><div class="file-top"><span class="file-name">SACRED_GEOMETRY_v7</span><span class="file-ext">.fig</span></div><div class="file-desc" data-i18n="s4.f3.desc">All sacred geometry diagrams. Cross-referenced with banana anatomy. The overlaps are disturbing.</div><div class="file-size">∞ diagrams · RESTRICTED</div></div>
+      <div class="file-item"><div class="file-top"><span class="file-name">THE_BOOK_OF_YELLOW</span><span class="file-ext">.epub</span></div><div class="file-desc" data-i18n="s4.f4.desc">A complete philosophical field guide to enlightenment through failure, absurdity, and potassium-rich fruit.</div><div class="file-size">COMING 2026 · PRE-ORDER OPEN</div></div>
+      <div class="file-item"><div class="file-top"><span class="file-name">INNER_SANCTUM_ACCESS</span><span class="file-ext">.exe</span></div><div class="file-desc" data-i18n="s4.f5.desc">Access to the deeper layers. Members only. Banana clearance required. You probably aren't ready.</div><div class="file-size">CLASSIFIED · JOIN CULT FIRST</div></div>
     </div>
     <div class="archive-col rr">
-      <div class="archive-col-label">transmissions — ongoing thought</div>
+      <div class="archive-col-label" data-i18n="s4.trans.label">transmissions — ongoing thought</div>
       <div class="qcard">
-        <div class="qcard-text" style="font-style:normal;font-family:var(--font-mono);font-size:0.75rem;letter-spacing:0.05em;line-height:2">
+        <div class="qcard-text" data-i18n="s4.cosmic" style="font-style:normal;font-family:var(--font-mono);font-size:0.75rem;letter-spacing:0.05em;line-height:2">
           <strong>THE COSMIC PEEL THEORY</strong><br><br>
           Ancient civilizations did not fall because of war, famine, or plague.<br><br>
           They fell because at the critical moment of hubris — at the exact peak of their arrogance — a cosmic banana peel appeared beneath the feet of their most serious philosopher.<br><br>
           The universe has humor. Civilizations that understand this, <strong>survive.</strong> Those who don't, <strong>become the joke.</strong>
         </div>
-        <div class="qcard-source">Sacred Banana Research Bulletin #003</div>
+        <div class="qcard-source" data-i18n="s4.cosmic.src">Sacred Banana Research Bulletin #003</div>
       </div>
     </div>
   </div>
@@ -822,31 +823,31 @@ footer{border-top:1px solid rgba(212,184,0,0.2);background:transparent;position:
 <section id="cult" class="section-wrap" style="padding-bottom:0;margin-bottom:0">
   <div class="section-header rr">
     <div class="sh-number">05</div>
-    <div class="sh-info"><div class="sh-label">Chapter Five — The Community</div><h2 class="sh-title">Join the <span class="accent">Cult</span></h2></div>
-    <div class="sh-meta">TYPE: initiation_form<br>CLEARANCE REQUIRED: NONE<br>WARNING: irreversible<br>MEMBERS: ∞</div>
+    <div class="sh-info"><div class="sh-label" data-i18n="s5.label">Chapter Five — The Community</div><h2 class="sh-title" data-i18n="s5.title">Join the <span class="accent">Cult</span></h2></div>
+    <div class="sh-meta" data-i18n="s5.meta">TYPE: initiation_form<br>CLEARANCE REQUIRED: NONE<br>WARNING: irreversible<br>MEMBERS: ∞</div>
   </div>
   <div class="cult-banner rr">
-    <div><div class="cult-banner-text">BECOME A DISCIPLE OF THE SACRED BANANA</div><div class="cult-banner-sub">The Imperium is open. The fruit is ripe. The floor is slippery.</div></div>
-    <div style="display:flex;gap:2px"><a href="#about" class="btn-raw" style="border-color:rgba(0,0,0,0.2);color:#000;background:rgba(0,0,0,0.1)">Read the Doctrine</a></div>
+    <div><div class="cult-banner-text" data-i18n="s5.banner">BECOME A DISCIPLE OF THE SACRED BANANA</div><div class="cult-banner-sub" data-i18n="s5.banner.sub">The Imperium is open. The fruit is ripe. The floor is slippery.</div></div>
+    <div style="display:flex;gap:2px"><a href="#about" class="btn-raw" style="border-color:rgba(0,0,0,0.2);color:#000;background:rgba(0,0,0,0.1)" data-i18n="s5.btn.doctrine">Read the Doctrine</a></div>
   </div>
   <div class="cult-body">
     <div class="cult-left rr">
-      <p class="cult-manifesto">You have wandered far, pilgrim. You have seen the pyramid. You have witnessed the peel. Now it is time to take your place among <strong>the Enlightened.</strong><br><br>Join the Imperium. Receive dispatches from beyond the veil of seriousness. Get early access to drops. Be the first to know when <strong>the next banana falls.</strong><br><br>No spam. Only sacred transmissions. <em>Unsubscribe anytime — if you can handle the emptiness.</em></p>
+      <p class="cult-manifesto" data-i18n="s5.manifesto">You have wandered far, pilgrim. You have seen the pyramid. You have witnessed the peel. Now it is time to take your place among <strong>the Enlightened.</strong><br><br>Join the Imperium. Receive dispatches from beyond the veil of seriousness. Get early access to drops. Be the first to know when <strong>the next banana falls.</strong><br><br>No spam. Only sacred transmissions. <em>Unsubscribe anytime — if you can handle the emptiness.</em></p>
       <form id="disciplesForm" action="/api/subscribe" method="POST">
         <p style="display:none"><label>Do not fill: <input name="bot-field"/></label></p>
         <div class="form-row">
           <input type="email" name="email" class="form-input" id="emailIn" placeholder="your.soul@universe.com" required/>
-          <button type="submit" class="btn-raw primary" id="initBtn">Initiate Me</button>
+          <button type="submit" class="btn-raw primary" id="initBtn" data-i18n="s5.btn.initiate">Initiate Me</button>
         </div>
       </form>
-      <div class="form-small">Mit dem Absenden stimmst du zu, E-Mails von Sacred Banana zu erhalten. Abmeldung jederzeit m&ouml;glich.<br>Details in unserer <a href="datenschutz.html">Datenschutzerkl&auml;rung</a>.</div>
+      <div class="form-small" data-i18n="s5.form.consent">Mit dem Absenden stimmst du zu, E-Mails von Sacred Banana zu erhalten. Abmeldung jederzeit m&ouml;glich.<br>Details in unserer <a href="datenschutz.html">Datenschutzerkl&auml;rung</a>.</div>
     </div>
     <div class="cult-right rr">
-      <div class="cult-perks-title">What Disciples Receive</div>
-      <div class="perk-row"><div class="perk-icon-box">📜</div><div><div class="perk-title">Early Access</div><div class="perk-body">First to know about drops, collabs, and limited releases before they go public.</div></div></div>
-      <div class="perk-row"><div class="perk-icon-box">🎁</div><div><div class="perk-title">Sacred Drops</div><div class="perk-body">Exclusive pieces, one-offs, and items that will never appear in the public shop.</div></div></div>
-      <div class="perk-row"><div class="perk-icon-box">🔮</div><div><div class="perk-title">Secret Transmissions</div><div class="perk-body">Classified content, manifesto updates, inner sanctum dispatches, and more.</div></div></div>
-      <div class="perk-row"><div class="perk-icon-box">🌀</div><div><div class="perk-title">Community Access</div><div class="perk-body">Join the collective. Connect with other disciples. Help shape the next chapter.</div></div></div>
+      <div class="cult-perks-title" data-i18n="s5.perks.title">What Disciples Receive</div>
+      <div class="perk-row"><div class="perk-icon-box">📜</div><div><div class="perk-title" data-i18n="s5.perk1.title">Early Access</div><div class="perk-body" data-i18n="s5.perk1.body">First to know about drops, collabs, and limited releases before they go public.</div></div></div>
+      <div class="perk-row"><div class="perk-icon-box">🎁</div><div><div class="perk-title" data-i18n="s5.perk2.title">Sacred Drops</div><div class="perk-body" data-i18n="s5.perk2.body">Exclusive pieces, one-offs, and items that will never appear in the public shop.</div></div></div>
+      <div class="perk-row"><div class="perk-icon-box">🔮</div><div><div class="perk-title" data-i18n="s5.perk3.title">Secret Transmissions</div><div class="perk-body" data-i18n="s5.perk3.body">Classified content, manifesto updates, inner sanctum dispatches, and more.</div></div></div>
+      <div class="perk-row"><div class="perk-icon-box">🌀</div><div><div class="perk-title" data-i18n="s5.perk4.title">Community Access</div><div class="perk-body" data-i18n="s5.perk4.body">Join the collective. Connect with other disciples. Help shape the next chapter.</div></div></div>
     </div>
   </div>
 </section>
@@ -860,16 +861,16 @@ footer{border-top:1px solid rgba(212,184,0,0.2);background:transparent;position:
   <div class="footer-top">
     <div class="fc">
       <span class="fc-brand"><img src="brand-icon.png" alt="" style="height:24px;width:auto;vertical-align:middle;margin-right:8px">SACRED BANANA</span>
-      <p class="fc-bio">An empire built on the universal truth that enlightenment arrives sideways — usually through absurdity, always through humor. Streetwear for the philosophically confused. Sacred geometry for the street-educated.</p>
+      <p class="fc-bio" data-i18n="footer.bio">An empire built on the universal truth that enlightenment arrives sideways — usually through absurdity, always through humor. Streetwear for the philosophically confused. Sacred geometry for the street-educated.</p>
       <div class="fc-socials"><a href="https://instagram.com/sacred_banana_cult" target="_blank" rel="noopener" class="fc-social" aria-label="Instagram">IG</a><a href="#" class="fc-social" aria-label="TikTok — coming soon">TK</a><a href="#" class="fc-social" aria-label="X — coming soon">𝕏</a><a href="#" class="fc-social" aria-label="Discord — coming soon">DC</a></div>
     </div>
-    <div class="fc"><div class="fc-label">Temple</div><ul class="fc-links"><li><a href="#about">The Doctrine</a></li><li><a href="#memes">Meme Temple</a></li><li><a href="#archive">Sacred Codex</a></li></ul></div>
-    <div class="fc"><div class="fc-label">Collection</div><ul class="fc-links"><li><a href="#collection">All Items</a></li></ul></div>
-    <div class="fc"><div class="fc-label">Imperium</div><ul class="fc-links"><li><a href="#cult">Join the Cult</a></li><li><a href="mailto:info@sacredbanana.com">Contact Elders</a></li><li><a href="impressum.html">Impressum</a></li><li><a href="datenschutz.html">Datenschutz</a></li></ul></div>
+    <div class="fc"><div class="fc-label" data-i18n="footer.temple">Temple</div><ul class="fc-links"><li><a href="#about" data-i18n="footer.doctrine">The Doctrine</a></li><li><a href="#memes" data-i18n="footer.memes">Meme Temple</a></li><li><a href="#archive" data-i18n="footer.codex">Sacred Codex</a></li></ul></div>
+    <div class="fc"><div class="fc-label" data-i18n="footer.collection">Collection</div><ul class="fc-links"><li><a href="#collection" data-i18n="footer.allitems">All Items</a></li></ul></div>
+    <div class="fc"><div class="fc-label" data-i18n="footer.imperium">Imperium</div><ul class="fc-links"><li><a href="#cult" data-i18n="footer.cult">Join the Cult</a></li><li><a href="mailto:info@sacredbanana.com" data-i18n="footer.contact">Contact Elders</a></li><li><a href="impressum.html">Impressum</a></li><li><a href="datenschutz.html">Datenschutz</a></li></ul></div>
   </div>
   <div class="footer-bottom">
     <span>© 2026 SACRED BANANA IMPERIUM — ALL RIGHTS ABSURD · <a href="impressum.html" style="color:var(--cream-ghost);text-decoration:underline;text-underline-offset:3px">Impressum</a> · <a href="datenschutz.html" style="color:var(--cream-ghost);text-decoration:underline;text-underline-offset:3px">Datenschutz</a></span>
-    <span>"In Banana We Trust"</span>
+    <span data-i18n="footer.banana">"In Banana We Trust"</span>
   </div>
 </footer>
 
@@ -885,6 +886,7 @@ footer{border-top:1px solid rgba(212,184,0,0.2);background:transparent;position:
 
 <button id="btt" aria-label="Back to top" title="Back to top">&#9650;</button>
 
+<script src="lang.js"></script>
 <script src="app.js"></script>
 <!-- Cloudflare Web Analytics (cookie-free, DSGVO-compliant) — auto-injected by Cloudflare dashboard -->
 </body>
