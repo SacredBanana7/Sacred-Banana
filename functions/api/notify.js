@@ -43,7 +43,7 @@ export async function onRequestPost(context) {
         'Authorization': 'Bearer ' + env.RESEND_API_KEY,
       },
       body: JSON.stringify({
-        from: 'Sacred Banana Bot <onboarding@resend.dev>',
+        from: 'Sacred Banana Bot <noreply@sacredbanana.com>',
         to: ['info@sacredbanana.com'],
         subject: '[SB] Neuer Subscriber: ' + newEmail + ' (#' + totalCount + ')',
         text: emailBody,
