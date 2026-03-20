@@ -3,7 +3,7 @@
  * POST /api/notify (internal, called by subscribe.js)
  *
  * Sends email notification to info@sacredbanana.com when a new subscriber signs up.
- * Uses MailChannels API (free for Cloudflare Workers with SPF configured).
+ * Uses Resend API (free tier: 100 emails/month).
  */
 
 export async function onRequestPost(context) {
@@ -21,7 +21,7 @@ export async function onRequestPost(context) {
     var newEmail = body.email || 'unknown';
     var totalCount = body.total || '?';
 
-    // Send via MailChannels (free for Cloudflare Workers)
+    // Send via Resend API
     var emailBody = [
       'Neuer Sacred Banana Subscriber!',
       '',
@@ -36,26 +36,21 @@ export async function onRequestPost(context) {
       'In Banana We Trust.'
     ].join('\n');
 
-    var res = await fetch('https://api.mailchannels.net/tx/v1/send', {
+    var res = await fetch('https://api.resend.com/emails', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer ' + env.RESEND_API_KEY,
+      },
       body: JSON.stringify({
-        personalizations: [{
-          to: [{ email: 'info@sacredbanana.com', name: 'Sacred Banana' }],
-        }],
-        from: {
-          email: 'noreply@sacredbanana.com',
-          name: 'Sacred Banana Bot',
-        },
+        from: 'Sacred Banana Bot <onboarding@resend.dev>',
+        to: ['info@sacredbanana.com'],
         subject: '[SB] Neuer Subscriber: ' + newEmail + ' (#' + totalCount + ')',
-        content: [{
-          type: 'text/plain',
-          value: emailBody,
-        }],
+        text: emailBody,
       }),
     });
 
-    if (res.ok || res.status === 202) {
+    if (res.ok) {
       console.log('[NOTIFY] Email sent for ' + newEmail);
       return new Response('OK', { status: 200 });
     } else {

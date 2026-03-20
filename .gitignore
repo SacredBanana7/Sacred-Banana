@@ -4,6 +4,9 @@ Sacred Banana webpage backround.png
 seedvr2__00001_.png
 Backround pic staged.png
 
+# Admin / secrets — NEVER commit
+ADMIN-LINKS.txt
+
 # Internal/dev files — not for deploy
 dashboard.html
 launch-checkliste.html
