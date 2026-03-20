@@ -60,6 +60,24 @@ export async function onRequestPost(context) {
     // Log for monitoring (visible in Cloudflare dashboard → Workers & Pages → Logs)
     console.log(`[SUBSCRIBE] ${email} at ${new Date().toISOString()}`);
 
+    // Send email notification if NOTIFY_EMAIL and NOTIFY_SECRET are set
+    if (env.NOTIFY_SECRET) {
+      try {
+        // Get subscriber count from KV
+        var count = '?';
+        if (env.SUBSCRIBERS) {
+          var list = await env.SUBSCRIBERS.list();
+          count = list.keys.length;
+        }
+        // Send notification via internal endpoint
+        await fetch(new URL('/api/notify', request.url).href, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'X-Notify-Secret': env.NOTIFY_SECRET },
+          body: JSON.stringify({ email: email, total: count }),
+        }).catch(function(){});
+      } catch(e) { console.log('[NOTIFY SKIP]', e.message); }
+    }
+
     return new Response(JSON.stringify({ ok: true, message: 'Subscribed' }), {
       status: 200,
       headers,
