@@ -51,13 +51,56 @@ export async function onRequestPost(context) {
     });
 
     if (res.ok) {
-      console.log('[NOTIFY] Email sent for ' + newEmail);
-      return new Response('OK', { status: 200 });
+      console.log('[NOTIFY] Admin email sent for ' + newEmail);
     } else {
       var errText = await res.text();
       console.log('[NOTIFY FAIL] ' + res.status + ': ' + errText);
-      return new Response('Email failed', { status: 500 });
     }
+
+    // Send welcome/confirmation email to the new subscriber
+    var welcomeBody = [
+      'you signed.',
+      '',
+      'welcome to the inner circle of the banana cult.',
+      '',
+      "what arrives here won't always make sense.",
+      "that's how you know it's working.",
+      '',
+      'no schedule. no formula.',
+      "just keys \u2014 delivered when they're ready.",
+      '(doors not included)',
+      '',
+      "you don't need to do anything.",
+      'the peel removes itself.',
+      '',
+      '\u2014',
+      'the sacred banana',
+      '',
+      "[didn't subscribe? do nothing. doing nothing is underrated.]"
+    ].join('\n');
+
+    var welcomeRes = await fetch('https://api.resend.com/emails', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer ' + env.RESEND_API_KEY,
+      },
+      body: JSON.stringify({
+        from: 'Sacred Banana <info@sacredbanana.com>',
+        to: [newEmail],
+        subject: 'you found it. maybe it found you.',
+        text: welcomeBody,
+      }),
+    });
+
+    if (welcomeRes.ok) {
+      console.log('[WELCOME] Email sent to ' + newEmail);
+    } else {
+      var welcomeErr = await welcomeRes.text();
+      console.log('[WELCOME FAIL] ' + welcomeRes.status + ': ' + welcomeErr);
+    }
+
+    return new Response('OK', { status: 200 });
 
   } catch (err) {
     console.error('[NOTIFY ERROR]', err.message);
