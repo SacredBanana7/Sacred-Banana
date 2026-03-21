@@ -391,7 +391,7 @@ function setLang(lang) {
   for (var i = 0; i < els.length; i++) {
     var key = els[i].getAttribute("data-i18n");
     if (dict[key] !== undefined) {
-      els[i].innerHTML = dict[key];
+      els[i].textContent = dict[key];
     }
   }
 

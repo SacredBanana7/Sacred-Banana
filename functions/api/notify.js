@@ -30,8 +30,7 @@ export async function onRequestPost(context) {
       'Gesamt-Subscriber: ' + totalCount,
       '',
       '---',
-      'Alle Subscriber einsehen:',
-      'https://sacredbanana.com/api/subscribers?secret=' + env.NOTIFY_SECRET,
+      'Subscriber-Liste: im Cloudflare Dashboard einsehen.',
       '',
       'In Banana We Trust.'
     ].join('\n');
@@ -45,7 +44,7 @@ export async function onRequestPost(context) {
       body: JSON.stringify({
         from: 'Sacred Banana Bot <noreply@sacredbanana.com>',
         to: ['info@sacredbanana.com'],
-        subject: '[SB] Neuer Subscriber: ' + newEmail + ' (#' + totalCount + ')',
+        subject: '[SB] Neuer Subscriber (#' + totalCount + ')',
         text: emailBody,
       }),
     });

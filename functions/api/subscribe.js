@@ -24,16 +24,15 @@ export async function onRequestPost(context) {
     const body = await request.json();
     const email = (body.email || '').trim().toLowerCase();
 
-    // Validate email
-    if (!email || !email.includes('@') || !email.includes('.')) {
+    // Validate email: length + RFC 5322 compliant regex
+    if (!email || email.length > 254) {
       return new Response(JSON.stringify({ error: 'Invalid email' }), {
         status: 400,
         headers,
       });
     }
 
-    // Basic email format check
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const emailRegex = /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)+$/;
     if (!emailRegex.test(email)) {
       return new Response(JSON.stringify({ error: 'Invalid email format' }), {
         status: 400,
