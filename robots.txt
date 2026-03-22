@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /api/
 Disallow: /to%20do%20list.html
 Disallow: /dashboard.html
 Disallow: /launch-checkliste.html
