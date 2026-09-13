@@ -5,4 +5,7 @@ Disallow: /to%20do%20list.html
 Disallow: /dashboard.html
 Disallow: /launch-checkliste.html
 
+User-agent: Mediapartners-Google
+Disallow:
+
 Sitemap: https://sacredbanana.com/sitemap.xml
